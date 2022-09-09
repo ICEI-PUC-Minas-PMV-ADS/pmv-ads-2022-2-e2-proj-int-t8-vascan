@@ -1,12 +1,11 @@
 # TÍTULO DO PROJETO
 
-`Análise e Desenvolvimento de Sistemas`
+`CURSO: Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`DISCIPLINA: Desenvolvimento de uma Aplicação Interativa`
 
-`2º Semestre`
+`SEMESTRE: 2º Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
