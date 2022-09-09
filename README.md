@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# VASCAN
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
