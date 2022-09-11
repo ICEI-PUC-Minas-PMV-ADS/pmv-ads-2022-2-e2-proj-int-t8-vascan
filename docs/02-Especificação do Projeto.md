@@ -1,5 +1,11 @@
 # Especificações do Projeto
 
+## Pesquisa de usuário 
+
+Para conhecermos quem são os usuários, suas dores e opiniões, fizemos uma pesquisa de usuário através de perguntas no Google Forms. Essa pesquisa pode ser conferida através do link:
+<a href="https://docs.google.com/forms/d/1OBfGvxwSoSVG6ntliC8nEnsmxwNVO2_WqKoNc1GWUO4/edit#responses">Pesquisa de usuário para um Sistema Acadêmico Online</a>
+
+
 ## Personas
 
 Jonathan Rodrigues tem 37 anos, é Professor de história. Ama lecionar, é ativo nas comunidades das redes sociais, gosta de visitar lugares ao ar livre, fazer trilhar com o seu cachorro, escutar música e participa de atividades voluntárias. Tem como principais frustrações a demora em lançar as notas dos alunos e em localizar turmas.
