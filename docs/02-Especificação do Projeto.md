@@ -18,7 +18,7 @@ Grazielle Silva tem 15 anos, é Estudante de Escola Pública. Gosta de ter um bo
 
 A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários. 
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
+|EU COMO... | QUERO/PRECISO ... |PARA ...                  |
 |--------------------|------------------------------------|----------------------------------------|
 |Jonathan Rodrigues | Facilidade em lançar as notas dos alunos | Diminuir o tempo de trabalho fora do seu horário nas escolas|
 |Marcela Gomes | Cadastrar os alunos  | Otimizar o tempo no trabalho |
