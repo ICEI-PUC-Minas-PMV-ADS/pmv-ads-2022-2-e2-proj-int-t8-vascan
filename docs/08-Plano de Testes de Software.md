@@ -1,24 +1,26 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+Os requisitos para realização dos testes de software são: 
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+● Site publicado na Internet 
 
-Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o(s) requisito(s) associado(s) a cada um deles está(ão) correto(s) - de acordo com o que foi definido na seção "2 - Especificação do Projeto". 
+● Navegador da Internet - Chrome, Firefox ou Edge 
 
-Por exemplo:
+● Conectividade de Internet para acesso às plataformas (APISs) 
+
+Os testes funcionais a serem realizados no aplicativo são descritos a seguir:
  
-| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+| **Caso de Teste** 	| **CT-01 - Compatibilidade com vários navegadores** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|	Requisito Associado 	| RNF-04 - O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge)  |
+| Objetivo do Teste 	| Verificar se o site é compatível com no mínimo três navegadores diferentes.  |
+| Passos 	| 1) Acessar o navegador <br> 2) Informar o endereço do site <br> 3) Visualizar página principal |
+|Critério de Êxito | • A página inicial deve abrir igualmente em todos os navegadores testado <br> • Deve carregar as demais informações igualmente|
 |  	|  	|
-| Caso de Teste 	| CT-02 – Efetuar login	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
+| Caso de Teste 	| **CT-02 - Teste do Menu de Funcionalidade distinto para cada perfil** 	|
+|Requisito Associado | RF-03- Menu de função distinto para cada perfil  |
+| Objetivo do Teste 	| Verificar se o menu de funções está distinto para cada perfil (Secretaria, Professor e Aluno)  |
+| Passos 	| 1) Acessar a Plataforma VASCAN <br> 2)Fazer login com o Perfil desejado <br> 3) Verificar o menu de funções disponibilizado na tela |
 |Critério de Êxito | - O login foi realizado com sucesso. |
 
  
