@@ -18,7 +18,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 
 
-## Wireframes
+## Wireframes interativos
 
 Conforme o diagrama de fluxo do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens que se seguem. Para visualizar o wireframe interativo, acesse o <a href="https://www.figma.com/file/XP02CZ8nnK7iFEJopKau47/Vascan?node-id=0%3A1">figma.com/Vascan</a>
 
