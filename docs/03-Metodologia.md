@@ -11,41 +11,13 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
  
 
-Ambiente 
-
-Plataforma 
-
-Link de Acesso 
-
-Repositório de código fonte 
-
-GitHub 
-
-ICEI-PUC-Minas-PMV-ADS Vascan 
-
-Documentos do projeto 
-
-Office 365  
-
-Trabalho Grupo 2 - Projeto Interação - Vascan 
-
-Projeto de Interface e  Wireframes 
-
-Figma 
-
-Figma Vascan 
-
-Gerenciamento do Projeto 
-
-GitHub Projects 
-
-ICEI-PUC Minas ADS - projects  
-
-Mural de ideias 
-
-Mural.co 
-
-Mural Vascan 
+| Ambiente | Plataforma | Link de Acesso |
+| ----------------------------| ------------- | ---------------------------------------------------------------------- |
+| Repositório de código fonte | GitHub | [ICEI-PUC-Minas-PMV-ADS Vascan](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t8-vascan) |
+| Documentos do projeto | Office 365 | [Trabalho Grupo 2 - Projeto Interação - Vascan](https://sgapucminasbr-my.sharepoint.com/:w:/g/personal/1242997_sga_pucminas_br/EWSjGcHAhh9GtRo2xZKhjG8BDlNxtwKZSjU2aHLbFiTi8Q?e=Zy4thx) |
+| Projeto de Interface e  Wireframes | Figma | [Figma Vascan](https://www.figma.com/file/XP02CZ8nnK7iFEJopKau47/Vascan?node-id=1%3A2) |
+| Gerenciamento do Projeto | GitHub Projects | [ICEI-PUC Minas ADS - projects](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/110) |
+| Mural de ideias | Mural.co | [Mural Vascan](https://app.mural.co/t/lazeracessivel9509/m/lazeracessivel9509/1661380147871/c8b90587671a9f06449f9c84782eb53acc5d816e?sender=u058bebd9925800d615a70680) |
 
  
 ## Gestão de Código Fonte 
