@@ -24,9 +24,13 @@ Conforme o diagrama de fluxo do projeto, apresentado no item anterior, as telas 
 
 ### Login
 
+Na tela de Login do Sistema Vascan, o usuário ao entrar ele deve selecionar o tipo de usuário: “Aluno”; “Professor” ou “Secretaria”, conforme imagem (3) abaixo, digitar a senha e clicar em entrar. 
+
 ![login](https://user-images.githubusercontent.com/53317747/193428735-acb6ee7f-6530-40ab-9d41-e3d7aa81ed2d.jpeg)
 
 ### Sessão do aluno
+
+Dentro da sessão do aluno, o usuário terá acesso as ferramentas e opções pertinentes ao tipo de usuário “aluno”, ver imagem (4) abaixo. 
 
 ![sessao](https://user-images.githubusercontent.com/53317747/193428742-cc696d3d-863f-49db-879e-790dd976c170.jpeg)
 
