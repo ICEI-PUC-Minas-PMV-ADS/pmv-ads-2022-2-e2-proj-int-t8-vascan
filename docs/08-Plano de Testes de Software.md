@@ -14,7 +14,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir:
 | Objetivo do Teste 	| Verificar se o site é compatível com no mínimo três navegadores diferentes.  |
 | Passos 	| 1) Acessar o navegador <br> 2) Informar o endereço do site <br> 3) Visualizar página principal |
 |Critério de Êxito | • A página inicial deve abrir igualmente em todos os navegadores testado <br> • Deve carregar as demais informações igualmente|
-|  	|  	|
+|  	|  	| 
 | **Caso de Teste** 	| **CT-02 - Teste do Menu de Funcionalidade distinto para cada perfil** 	|
 |Requisito Associado | RF-03- Menu de função distinto para cada perfil  |
 | Objetivo do Teste 	| Verificar se o menu de funções está distinto para cada perfil (Secretaria, Professor e Aluno)  |
