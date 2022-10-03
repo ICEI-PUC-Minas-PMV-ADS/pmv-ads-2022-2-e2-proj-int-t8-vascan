@@ -67,4 +67,6 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 ## Diagrama de Casos de Uso
 
+O objetivo do diagrama de caso de uso em UML é demonstrar as diferentes maneiras que o usuário pode interagir com um sistema. 
+
 <img width="75%" src="https://user-images.githubusercontent.com/89920953/189546347-5ff1b582-020e-4364-8718-95313f40389d.png" alt="Diagrama de Caso de Uso">
