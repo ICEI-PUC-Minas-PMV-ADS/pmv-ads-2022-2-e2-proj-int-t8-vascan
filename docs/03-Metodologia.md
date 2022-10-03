@@ -87,7 +87,7 @@ Figura 2 – Tela do Kanban no GitHub utilizada no Projeto Vascan
 
 A tarefas são, ainda, etiquetadas em função da natureza da atividade, e seguem o seguinte esquema de categorias:  
 
-● Para fazer 
-● Em progresso  
-● Feito 
+● Para fazer <br />
+● Em progresso <br />
+● Feito <br />
 
