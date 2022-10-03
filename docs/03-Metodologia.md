@@ -24,7 +24,8 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
 Para gestão do código fonte do software desenvolvido pela equipe, o grupo utiliza um processo baseado no Git Flow abordado por Vietro (2015), mostrado na Figura (1) abaixo a seguir. Desta forma, todas as manutenções no código são realizadas em branches separados, identificados como Feature, Develop, Release, Hotfix, Main. 
 
- 
+ ![gitflow](https://user-images.githubusercontent.com/53317747/193483861-c4e42901-6577-43cb-bb1f-c095a5c16e83.jpeg)
+
 
 Figura 1 – Fluxo de Gestão de Código Fonte do Sistema Vascan 
 
@@ -79,7 +80,8 @@ O quadro kanban do grupo no GitHub está disponível através da URL [Vascan Pro
 
 A definição desta estrutura se baseou na proposta feita por Littlefield (2016). 
 
- 
+ ![backlog](https://user-images.githubusercontent.com/53317747/193483973-a54a557a-128c-49ac-a9a8-0c9ba0f2b3d6.jpeg)
+
                
 Figura 2 – Tela do Kanban no GitHub utilizada no Projeto Vascan  
 
