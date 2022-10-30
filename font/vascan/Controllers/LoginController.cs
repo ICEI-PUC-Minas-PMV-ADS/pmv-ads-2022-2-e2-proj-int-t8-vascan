@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using vascan.Data;
 using vascan.Models;
 using System.Data.SqlClient;
 using System.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace vascan.Controllers
 {
@@ -13,6 +13,11 @@ namespace vascan.Controllers
         {
             return View();
         }
+
+        //public void Alert()
+        //{
+        //    @Html.Raw("");
+        //}
 
         [HttpPost]
         public IActionResult Entrar(LoginModel loginModel)
@@ -56,9 +61,7 @@ namespace vascan.Controllers
                             {
                                 ModelState.AddModelError("", "Usuário ou senha inválidos");
                             }
-
-                            return RedirectToAction("Index", "Home");
-                        }
+                        }                       
                         //Response.Cookies.Append("msgErro", "Invalido");
                         //ModelState.AddModelError("", "Usuário ou senha inválidos");
 

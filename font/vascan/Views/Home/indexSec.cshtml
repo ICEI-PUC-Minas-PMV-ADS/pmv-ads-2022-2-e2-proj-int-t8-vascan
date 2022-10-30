@@ -89,7 +89,8 @@
     <!--Cabeçalho-->
     <header class="body-cabecalho">
         <h1 class="title">Início</h1>
-        <a class="sair" href="#">@Html.ActionLink("Sair", "Index", "Login", null, new { @class = "sair" });</a>
+        @*<a class="sair" href="#">@Html.ActionLink("Sair", "Index", "Login", null, new { @class = "sair" });</a>*@
+        <a class="sair" asp-controller="Login" asp-action="Index">Sair</a>
     </header>
 
     <div class="body">

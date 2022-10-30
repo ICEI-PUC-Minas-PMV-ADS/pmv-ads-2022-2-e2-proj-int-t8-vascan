@@ -67,6 +67,14 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[1.25.4, )"
+            },
+            "Microsoft.Identity.Web.UI": {
+              "target": "Package",
+              "version": "[1.25.4, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.10, )"
