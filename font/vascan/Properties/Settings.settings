@@ -1,0 +1,6 @@
+﻿namespace vascan.Properties
+{
+    public class Settings
+    {
+    }
+}

@@ -1,0 +1,138 @@
+body {
+    width: auto;
+    margin: auto;
+    font-family: sans-serif;
+    position: relative;
+    background-color: rgb(172, 171, 171);
+}
+h1 {
+    text-align: center;
+}
+.texto {
+    position: relative;
+    color: white;
+}
+.login {
+    height: 100vh;
+    background-color: rgb(172, 171, 171);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-esquerda {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    max-width: 800px;
+}
+.login-direita {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    max-width: 800px;
+}
+.imgLogin {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    filter: brightness(70%);
+    right: 50%;
+}
+.box {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.caixa {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 300px;
+    transform: translate(0, -50%);
+    margin-top: auto;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 8%;
+    text-align: center;
+    position: relative;
+    background-color: white;
+}
+.input-box {
+    justify-content: center;
+    align-items: center;
+}
+.input-login {
+    margin: auto;
+    justify-content: center;
+    width: 280px;
+    height: 45px;
+    border: 1px solid rgb(124, 124, 124);
+    align-items: center;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background-color: white;
+    margin: 8px 0;
+}
+.input-select {
+    justify-content: center;
+    align-items: center;
+}
+.select-input {
+    margin-top: 3%;
+    width: 300px;
+    height: 45px;
+    color: rgb(102, 102, 102);
+    background-color: white;
+    border: 1px solid rgb(124, 124, 124);
+    border-radius: 4px;
+    text-align: center;
+    font-size: larger;
+}
+.label-input {
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    right: 30%;
+}
+.botaoLogin {
+    border: 1px none #ccc;
+    background-color: gray;
+    color: white;
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    font-weight: bold;
+}
+.botaoLogin:hover {
+    background-color: rgb(90, 90, 90); 
+}
+#selectUser {
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    right: 24%;
+}
+#label-login {
+    right: 27%;
+}
+#label-senha {
+    right: 29%;
+}
+#selecionar {
+    font-size: small;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgb(231, 231, 231) inset
+
+}
+
+
+

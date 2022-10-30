@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links de font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="~/css/p-turmas.css">
+    <link rel="stylesheet" href="~/css/root.css">
+
+    <!--Link Icones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <title>@ViewData["Title"]Vascan - Professor</title>
+</head>
+
+<body>
+    <!--Menu lateral-->
+    <nav class="menu">
+        <header class="menu-cabecalho">
+            <div class="logo">
+                <div class="logoProvisoria"></div>
+                <h2 class="ocultar">Vascan</h2>
+            </div>
+
+            <span class="ocultar">Professor</span>
+        </header>
+
+        <ul class="menu-links">
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-house-door-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Inicio</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-calendar-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Calendário</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-folder2" aria-hidden="true"></i>
+                    <span class="ocultar">Turmas</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-clipboard-data" aria-hidden="true"></i>
+                    <span class="ocultar">Avaliações</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Secretaria</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="btn-modoUsar">
+            <a href="#">
+                <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+                <span class="ocultar">Como usar</span>
+            </a>
+        </div>
+
+        <div class="btn-ocultar">
+            <i class="bi bi-box-arrow-left" aria-hidden="true"></i>
+            <span class="ocultar">Ocultar</span>
+        </div>
+    </nav>
+
+
+    <!--Aqui começa o "Corpo" da página-->
+
+    <!--Cabeçalho-->
+    <header class="body-cabecalho">
+        <h1 class="title">Turmas</h1>
+        <a class="sair" href="#">Sair</a>
+    </header>
+
+    <div class="body">
+
+    <!--Comece a codar a partir daqui por favor :) (dentro da div body)-->
+        <!--Abas da Tabela-->
+        <div class="nav_tabs">
+            <ul>
+                <div class="box-search">
+                    <input type="text" class="input-search" placeholder="Pesquisar aluno">
+                    <button>Pesquisar</button>
+                </div>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tabs" id="tab1">
+                    <span id="box-label"><label for="tab1" class="label-tab">Turma <br>2A</label></span>
+                    <div class="content" id="content1">
+                        <table class="tabela-principal">
+                            <tr class="table-line">
+                               <td id="table-item1">ID do Aluno</td>
+                               <td id="table-item2"> Aluno</td>
+                               <td id="table-item3">Faltas</td>
+                               <td id="table-item4">Nota Total</td> 
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+                    <span id="box-label"><label for="tab2">Turma <br>2B</label></span>
+                    <div class="content" id="content2">
+                        <table class="tabela-principal">
+                            <tr class="table-line">
+                               <td id="table-item1">ID do Aluno</td>
+                               <td id="table-item2">Aluno</td>
+                               <td id="table-item3">Faltas</td>
+                               <td id="table-item4">Nota Total</td> 
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+                    <span id="box-label"><label for="tab3">Turma <br>2C</label></span>
+                    <div class="content" id="content3">
+                        <table class="tabela-principal">
+                            <tr class="table-line">
+                               <td>ID do Aluno</td>
+                               <td>Aluno</td>
+                               <td>Faltas</td>
+                               <td>Nota Total</td> 
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+                    <span id="box-label"><label for="tab4">Turma <br>2D</label></span>
+                    <div class="content" id="content4">
+                        <table class="tabela-principal">
+                            <tr class="table-line">
+                               <td>ID do Aluno</td>
+                               <td>Aluno</td>
+                               <td>Faltas</td>
+                               <td>Nota Total</td> 
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+        
+    </div>
+
+
+    <!--Área de Scripts-->
+    <script src="~/js/menu.js"></script>
+</body>
+</html>
+
+<!--Elementos que estão com *class="ocultar"*, são elementos que não ficarão visíveis quando o menu fechar-->
