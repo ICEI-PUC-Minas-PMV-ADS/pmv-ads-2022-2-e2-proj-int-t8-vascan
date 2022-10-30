@@ -2,6 +2,10 @@
 
 Teste de divisão das funções e telas de cada um, login separado para cada usuário (aluno, professor e secretário). 
 
+Usuários no banco de dados:
+
+![BD_users](https://user-images.githubusercontent.com/103225367/198892277-16f687a2-0cfd-45a4-8afe-18aa2fb61704.png)
+
 Aluno:  
 
 ![Login_Screen_Aluno](https://user-images.githubusercontent.com/103225367/198892196-6626672c-c2ef-493a-aea7-be076d6a321a.png)
