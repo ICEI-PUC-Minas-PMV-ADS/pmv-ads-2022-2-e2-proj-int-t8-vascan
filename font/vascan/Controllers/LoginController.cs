@@ -14,10 +14,6 @@ namespace vascan.Controllers
             return View();
         }
 
-        //public void Alert()
-        //{
-        //    @Html.Raw("");
-        //}
 
         [HttpPost]
         public IActionResult Entrar(LoginModel loginModel)
@@ -34,12 +30,7 @@ namespace vascan.Controllers
 
                 foreach (DataRow row1 in Tabela1.Rows)
                 {
-                    //string login = row1[1].ToString();
-                    //string senha = row1[2].ToString();
                     string tipo = row1[3].ToString();
-                    //Response.Cookies.Append("Erro", login);
-                    //Response.Cookies.Append("Erro2", senha);
-                    //Response.Cookies.Append("Erro3", tipo);
 
                     if (ModelState.IsValid)
                     {
@@ -62,8 +53,6 @@ namespace vascan.Controllers
                                 ModelState.AddModelError("", "Usuário ou senha inválidos");
                             }
                         }                       
-                        //Response.Cookies.Append("msgErro", "Invalido");
-                        //ModelState.AddModelError("", "Usuário ou senha inválidos");
 
                     }
                 }

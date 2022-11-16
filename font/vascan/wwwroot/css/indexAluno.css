@@ -194,7 +194,9 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
     font-weight: 600;
 }
 .sair{
-    margin-right: -35vw;
+    position: relative;
+    right: 5px;
+    margin-right: 9vw;
     font-weight: 500;
     font-size: 1vw;
     color: #000;
