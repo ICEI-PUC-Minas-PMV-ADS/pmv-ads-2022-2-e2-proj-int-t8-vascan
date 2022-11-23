@@ -1,10 +1,18 @@
+/*As cores estão no arquivo "root.css", você adicionar as cores como eu fiz (através do "var()") ou pode só consultar as cores*/
+
+/*Pro código ficar mais organizado e padronizado, eu deixei comentado o lugar onde seria recomendado você começar o seu código*/
+
+/*Qualquer duvida pode me chamar viu?*/
+
+
+
+
 /*Reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    text-decoration: none;
     font-family: 'Inter', sans-serif;
 }
 
@@ -12,8 +20,9 @@
 body{
     position: relative;
     overflow-x: hidden;
-    background-color: var(--background-pag);
+    background-color: #F4F4F4!important;
 }
+a{ text-decoration: none!important; }
 
 
 /*Menu Fechado*/
@@ -24,7 +33,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--cor-principal-prof);
+    background-color: var(--cor-principal-sec);
     transition: width 0.5s ease-in-out;
     z-index: 1000;
 }
@@ -52,7 +61,7 @@ body{
     height: 2vh;
     margin: 0;
     border-radius: 100%;
-    background-color: var(--icones-menu-prof);
+    background-color: var(--icones-menu-sec);
 }
 .logo > h2{
     font-size: 1.2vw;
@@ -68,7 +77,10 @@ body{
 
 
 /*Área de links do menu*/
-.menu-links{ margin-bottom: 8vh; }
+.menu-links{ 
+    padding: 0;
+    margin-bottom: 6vh; 
+}
 
 .link{
     margin-bottom: 2vh;
@@ -82,7 +94,7 @@ body{
 }
 .link i, .btn-ocultar i{
     font-size: 1.4vw;
-    color: var(--icones-menu-prof);
+    color: var(--icones-menu-sec);
 }
 .link span{
     font-size: 1.07vw;
@@ -92,6 +104,12 @@ body{
     font-weight: 400;
     color: var(--texto-menu);
 }
+.pg_ativa{ 
+    background-color: var(--cor-destaques-sec); 
+    border-radius: 5px;
+}
+
+
 
 .btn-modoUsar{ margin-bottom: 8vh; }
 .btn-modoUsar span, .btn-modoUsar i{ 
@@ -101,7 +119,7 @@ body{
 .btn-modoUsar a{
     padding: 2vh 1.5vw;
     border-radius: 5px;
-    background-color: var(--background-btnMenu-prof);
+    background-color: var(--background-btnMenu-sec);
 }
 .btn-modoUsar span, .btn-ocultar span{
     margin-left: 0.7vw;
@@ -118,9 +136,9 @@ body{
 /*Efeitos Hover*/
 .link:hover, .link a:focus, .btn-modoUsar a:hover, .btn-ocultar:hover{
     border-radius: 5px;
-    background-color: var(--cor-destaques-prof)
+    background-color: var(--cor-destaques-sec)
 }
-
+.btn-modoUsar:hover i, .btn-modoUsar:hover span{ color: var(--icones-menu-sec); }
 
 
 /*Menu Aberto*/
@@ -134,16 +152,11 @@ body.fechar .ocultar{
     transition-delay: 0s;
 }
 
-body.fechar .menu-cabecalho{
-    margin-bottom: 4vw;
-}
-body.fechar .logoProvisoria{
-    margin-right: 1vw;
-}
+body.fechar .menu-cabecalho{ margin-bottom: 3vw; }
+body.fechar .logoProvisoria{ margin-right: 1vw; }
 
-body.fechar .menu-links{
-    margin-bottom: 5.5vh;
-}
+body.fechar .menu-links{ margin-bottom: 5.5vh; }
+body.fechar .link{ margin-bottom: 1.5vh; } 
 body.fechar .link a{
     display: flex;
     align-items: baseline;
@@ -176,6 +189,7 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
 }
 
 
+
 /*Aqui começa a configuração da página em si*/
 
 /*Cabeçalho*/
@@ -206,6 +220,7 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
 
 
 /*Configuração do corpo da página*/
+
 .body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
@@ -219,137 +234,119 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
     width: 28vw;
 }
 
-/*Container de Boas-Vindas*/
-.boasvindas{
-    width: 45vw;
-    height: 18vh;
-    margin: 3vh 0 6vh 0;
-    padding: 10vh 3vw;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-.texto-boasvindas{
-    width: 27vw;
-    margin-right: 3vw;
-}
-.texto-boasvindas h2{
-    margin-bottom: 2.5vh;
-    font-size: 1.2vw;
-    font-weight: 500;
-}
-.texto-boasvindas span{ font-weight: 600; }
-.texto-boasvindas p{
-    font-size: 1vw;
-    margin-bottom: 2.5vh;
-    color: #7C7C7C;
-}
-.texto-boasvindas a{
-    font-size: 1vw;
-    font-weight: 500;
-    color: var(--cor-destaques-prof);
-}
-.texto-boasvindas a:hover, .agenda a:hover{
-    font-weight: 600;
-    color: var(--texto-links-prof);
-}
-
-.ilustracao-boasvindas{
-    width: 9vw;
-    height: 19vh;
-    position: relative;
-    bottom: 3vh;
-    border-radius: 10px;
-    background-color: var(--cor-destaques-prof);
-}
 
 
-/*Atalhos*/
-.atalhos{
-    display: flex;
-    flex-direction: column;
+/*Comece a codar a partir daqui por favor*/
+/*Botão de Adicionar Evento*/
+.btn-addEvento{
     margin-bottom: 10vh;
+    padding: 1vh 2vw;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 1vw;
+    background: var(--cor-principal-sec);
+    color: #fff;
+}
+.btn-solicitar:active{ background: var(--cor-destaques-sec); }
+
+/*Calendario letivo*/
+.eventos-calendario-container{ 
+    height: 80vh;
+    overflow-y: scroll;
+}
+.eventos-calendario-container::-webkit-scrollbar{ 
+    width: 0.8vw;
+    background-color: #f4f4f400;
+}
+.eventos-calendario-container::-webkit-scrollbar-button{
+    height: 0;
+}
+.eventos-calendario-container::-webkit-scrollbar-thumb{ 
+    background-color: var(--cor-destaques-sec);
+    border-radius: 3px; 
 }
 
-.atalho-titulo, .horario-titulo, .agenda-titulo, .tarefas-titulo{
-    margin-bottom: 3vh;
-    font-size: 1.05vw;
+/*Editando padrões do bootstrap*/
+.accordion-item .accordion-header .accordion-button{
+    color: #000;
+    background-color: var(--cor-secundaria-sec);
+}
+.accordion-item .accordion-header .accordion-button:not(.collapsed) {
     font-weight: 500;
+    background-color: var(--cor-secundaria-sec);
+    color: var(--cor-principal-sec);
+}
+.accordion-item .accordion-header .accordion-button:focus {
+    border-color: none;
+    box-shadow: none;
+}
+.accordion .accordion-item{ 
+    margin-bottom: 5vh;
+    border: none;
 }
 
-.atalhos-link{
+/*Conteúdo dos eventos*/
+.accordion-body{
+    height: 38vh;
+    padding-top: 5vh!important;
+}
+
+.container-principal .evento-item{
     display: flex;
-    align-items: center;
-
+    margin-bottom: 5vh;
+    margin-left: 1vw;
+    font-size: 1vw;
 }
-.linkatalho{
-    width: 13vw;
-    height: 10vh;
-    margin-left: 2vw;
-    border-radius: 5px;
-    background-color: var(--background-atalhos-prof);
+.evento-item .data-item{
+    font-weight: 600;
+    padding: 0.5vh 2vw 0.2vh 0;
+    border-right: 2px solid var(--cor-destaques-sec);
 }
+.evento-item p{
+    height: 4vh;
+}
+.evento-item .nome-item{ padding: 0 1vw; }
+.evento-item .btn-editar-item, .evento-item .btn-excluir-item{
+    height: 2vh;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    position: relative;
+    left: 15vw;
+}
+.btn-editar-item{ margin-left: 1.5vw;}
 
-
-/*Horário de aula*/
-.quadro-de-horarios{
-    width: 45vw;
-    height: 49vh;
-    padding: 3vh 1vw;
+/*Calendário*/
+.calendario-container{
+    height: 38vh;
+    margin-bottom: 6vh;
+}
+.calendario-container, .agenda{
+    width: 28vw;
     border-radius: 10px;
     background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 0.5vw;
+    padding: 3vh 2vw;
 }
-.horario-dia{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.titulo-dia{
-    font-size: 1vw;
-    font-weight: 500;
-    margin-bottom: 4vh;
-}
-.aula{
-    padding: 2.4vh 2.1vw;
-    margin-bottom: 2vh;
-    border-radius: 5px;
-    background-color: #e9e9e9;
-    width: 8vw;
+.calendario-container h3, .agenda h3{
+    font-size: 1.2vw;
     text-align: center;
 }
-.aula p{
-    font-size: 0.9vw;
-    font-weight: 400;
-    color: #7C7C7C;
-}
-.intervalo{
-    height: 2vh;
-}
 
-/*Agenda*/
+/*Agenda Escolar*/
 .agenda{
-    width: 28vw;
-    height: 40vh;
-    padding: 3vh 2vw;
-    margin-bottom: 6vh;
-    overflow-y: scroll;
+    height: 55vh;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    background-color: #fff;
-    scrollbar-arrow-color: #5B9895;
+    overflow-y: scroll;
+    border: 1px solid var(--cor-destaques-sec);
 }
 .agenda::-webkit-scrollbar{ width: 0.8vw; }
 .agenda::-webkit-scrollbar-button{
     height: 0;
 }
 .agenda::-webkit-scrollbar-thumb{ 
-    background-color: var(--cor-principal-prof);
+    background-color: var(--cor-principal-sec);
     border-radius: 10px; 
 }
 
@@ -365,7 +362,7 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
 }
 .data{
     padding: 0.3vh 2vw 0.3vh 1vw;
-    border-right: var(--cor-destaques-prof) 2px solid;
+    border-right: var(--cor-destaques-sec) 2px solid;
 }
 .data-tarefa{
     margin-bottom: 0.1vh;
@@ -383,67 +380,120 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
     font-size: 1vw;
 }
 
-.agenda a{
-    position:initial;
-    margin-top: 7vh;
-    align-self: center;
-    font-size: 1vw;
-    font-weight: 500;
-    color: var(--cor-destaques-prof);
-}
 
 
-/*Tarefas Diárias*/
-.tarefasdiarias{
-    width: 28vw;
-    height: 64vh;
-    padding: 3vh 2vw;
-    border-radius: 10px;
-    background-color: var(--cor-principal-prof);
-}
-.tarefas-titulo{ 
-    text-align: center;
-    color: #fff;
-}
-.tarefasdiarias::-webkit-scrollbar{ width: 0.8vw; }
-.tarefasdiarias::-webkit-scrollbar-button{ height: 0; }
-.tarefasdiarias::-webkit-scrollbar-thumb{ 
-    background-color: var(--cor-secundaria-prof);
-    border-radius: 10px; 
-}
-.form-tarefas{
-    width: 100%;
-    padding: 1.5vh 1vw 1.5vh 2vw;
-    margin-top: 3vh;
+
+
+
+
+/*Configuração de Modal*/
+.modal-container.mostrar{
     display: flex;
-    justify-content: space-around;
+}
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    display: none; 
+    justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    background: rgba(0,0,0, 0.5);
+}
+
+.modalCard{
+    width: 38%;
+    min-width: 600px;
+    height: 66%;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--background-sections);
+    overflow-y: scroll;
+}
+.modalCard::-webkit-scrollbar{ 
+    width: 0.8vw;
     background-color: #fff;
 }
-.form-tarefas input{
-    width: 80%;
-    border: none;
-    outline: none;
-    background-color: #ffffff00;
-    color: var(--texto-links-prof);
+.modalCard::-webkit-scrollbar-button{ height: 0; }
+.modalCard::-webkit-scrollbar-thumb{ 
+    background-color: var(--texto-links-sec);
+    border-radius: 3px; 
 }
-.form-tarefas button{
-    padding: 0.5vh 0.5vw;
-    border: none;
+
+/*Botão de fechar*/
+.modalCard-fechar{
+    padding: 10px;
+    position: absolute;
+    top: 15vh;
+    right: 29.2vw;
+    z-index: 3000;
+    cursor: pointer;
     outline: none;
+    border: none;
     border-radius: 5px;
-    background-color: var(--background-atalhos-prof);
+    box-shadow: 0 4px 4px 0 rgba(117, 117, 117, 0.25);
+    background-color: var(--cor-destaques-sec);
+    font-size: 12px;
     color: #fff;
-    font-weight: 600;
 }
-.form-tarefas button:active{
-    background-color: var(--cor-destaques-prof);
+.modalCard-fechar:hover{
+    background-color: var(--background-atalhos-sec);
+    transition: .1s;
+}
+
+.modalCard-conteudo{ padding: 4vh 3vw; }
+
+.conteudo-titulo{
+    font-size: 1.3vw;
+    text-align: center;
+    margin-bottom: 7vh;
+    color: var(--texto-pag);
+}
+.conteudo-form{ margin-left: 5.5vw; }
+.input-container:nth-of-type(2){ margin: 5vh 0; }
+.input-container label{
+    font-size: 1vw;
+    margin-bottom: 1vh;
+}
+.input-container input{
+    outline: none;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+    padding: 0.5vh 0.5vw;
+    width: 22vw;
+    font-size: 1vw;
+}
+.modalCard-conteudo .btn-adicionar{
+    outline: none;
+    border: none;
+    background: var(--cor-principal-sec);
+    color: #fff;
+    font-size: 1vw;
+    border-radius: 15px;
+    padding: 0.6vh 1vw;
+    margin-top: 5vh;
+    position: relative;
+    left: 15vw;
 }
 
 
 
-/*Responsividade*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsividade*//*Responsividade meio meia boca (por enquanto)*/
 @media(max-width: 425px){
 
     /*Menu Fechado*/
@@ -486,15 +536,6 @@ body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
 
     /*menu aberto*/
     body.fechar .menu{ width: 40vw; }
-
-    body.fechar .link a, body.fechar .btn-ocultar{ width: 17vw }
-
-    body.fechar .btn-ocultar{ padding: 2.5vh 6vw; }
-    body.fechar .btn-ocultar i { font-size: 4vw; }
-
-
-    /*Configurações do modo "menu fechado"*/
-    body.fechar .menu{ width: 20vw; }
 
     body.fechar .link a, body.fechar .btn-ocultar{ width: 17vw }
 

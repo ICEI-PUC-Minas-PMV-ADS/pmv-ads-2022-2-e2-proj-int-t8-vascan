@@ -15,10 +15,44 @@ namespace vascan.Controllers
         {
             return View();
         }
-        public IActionResult indexSec()
+        public IActionResult IndexSec()
         {
             return View();
         }
+
+        public IActionResult professorSec()
+        {
+            return View();
+        }
+
+        public IActionResult secretariaProf()
+        {
+            return View();
+        }
+
+        public IActionResult secretariaAluno()
+        {
+            return View();
+        }
+
+
+        public IActionResult calendarioSec()
+        {
+            return View();
+        }
+
+        public IActionResult alunosSec()
+        {
+            return View();
+        }
+
+        public IActionResult professorTurmas()
+        {
+            return View();
+        }
+
+
+
 
         public IActionResult Privacy()
         {

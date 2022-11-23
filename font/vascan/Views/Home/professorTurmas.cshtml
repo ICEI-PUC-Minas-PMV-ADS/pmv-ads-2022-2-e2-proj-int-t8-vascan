@@ -11,13 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!--Link CSS-->
-    <link rel="stylesheet" href="~/css/p-turmas.css">
+    <link rel="stylesheet" href="~/css/professorTurmas.css">
     <link rel="stylesheet" href="~/css/root.css">
 
     <!--Link Icones do Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>@ViewData["Title"]Vascan - Professor</title>
+    <title>Professor - Turmas</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
 
         <ul class="menu-links">
             <li class="link">
-                <a href="#">
+                <a asp-controller="Home" asp-action="Index">
                     <i class="bi bi-house-door-fill" aria-hidden="true"></i>
                     <span class="ocultar">Inicio</span>
                 </a>
@@ -62,7 +62,7 @@
             </li>
 
             <li class="link">
-                <a href="#">
+                <a asp-controller="Home" asp-action="secretariaProf">
                     <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
                     <span class="ocultar">Secretaria</span>
                 </a>
@@ -88,7 +88,7 @@
     <!--Cabeçalho-->
     <header class="body-cabecalho">
         <h1 class="title">Turmas</h1>
-        <a class="sair" href="#">Sair</a>
+        <a class="sair" asp-controller="Login" asp-action="Index">Sair</a>
     </header>
 
     <div class="body">
@@ -97,21 +97,28 @@
         <!--Abas da Tabela-->
         <div class="nav_tabs">
             <ul>
-                <div class="box-search">
-                    <input type="text" class="input-search" placeholder="Pesquisar aluno">
-                    <button>Pesquisar</button>
-                </div>
                 <li>
-                    <input type="radio" name="tabs" class="rd_tabs" id="tab1">
+                    <input type="radio" name="tabs" class="rd_tabs" id="tab1" checked>
                     <span id="box-label"><label for="tab1" class="label-tab">Turma <br>2A</label></span>
                     <div class="content" id="content1">
-                        <table class="tabela-principal">
-                            <tr class="table-line">
-                               <td id="table-item1">ID do Aluno</td>
-                               <td id="table-item2"> Aluno</td>
-                               <td id="table-item3">Faltas</td>
-                               <td id="table-item4">Nota Total</td> 
-                            </tr>
+                        <div class="box-search">
+                            <input type="text" class="input-search" placeholder="Aluno" id="input-aluno" autocomplete="off">
+                            <input type="text" class="input-search" placeholder="Faltas" id="input-faltas" autocomplete="off">
+                            <input type="text" class="input-search"  placeholder="Notas" id="input-notas" autocomplete="off">
+                            <button onclick="aluno.salvar()" class="btn-salvar" id="btn1">Salvar</button>
+                            <button onclick="aluno.cancelar()" class="btn-cancelar">Cancelar</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <th class="center">ID</th>
+                                <th>Aluno</th>
+                                <th>Faltas</th>
+                                <th>Notas</th>
+                                <th>Ações</th>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr></tr>
+                            </tbody>
                         </table>
                     </div>
                 </li>
@@ -119,41 +126,49 @@
                     <input type="radio" name="tabs" class="rd_tabs" id="tab2">
                     <span id="box-label"><label for="tab2">Turma <br>2B</label></span>
                     <div class="content" id="content2">
-                        <table class="tabela-principal">
-                            <tr class="table-line">
-                               <td id="table-item1">ID do Aluno</td>
-                               <td id="table-item2">Aluno</td>
-                               <td id="table-item3">Faltas</td>
-                               <td id="table-item4">Nota Total</td> 
-                            </tr>
-                        </table>
+                        <div class="box-search">
+                            <input type="text" class="input-search" placeholder="Aluno" id="input-aluno2" autocomplete="off">
+                            <input type="text" class="input-search" placeholder="Faltas" id="input-faltas2" autocomplete="off">
+                            <input type="text" class="input-search"  placeholder="Notas" id="input-notas2" autocomplete="off">
+                            <button onclick="aluno2.salvar2()" class="btn-salvar" id="btn2">Salvar</button>
+                            <button onclick="aluno2.cancelar()" class="btn-cancelar">Cancelar</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <th class="center">ID</th>
+                                <th>Aluno</th>
+                                <th>Faltas</th>
+                                <th>Notas</th>
+                                <th>Ações</th>
+                            </thead>
+                            <tbody id="tbody2">
+                                <tr></tr>
+                            </tbody>
+                        </table>                   
                     </div>
                 </li>
                 <li>
                     <input type="radio" name="tabs" class="rd_tabs" id="tab3">
                     <span id="box-label"><label for="tab3">Turma <br>2C</label></span>
                     <div class="content" id="content3">
-                        <table class="tabela-principal">
-                            <tr class="table-line">
-                               <td>ID do Aluno</td>
-                               <td>Aluno</td>
-                               <td>Faltas</td>
-                               <td>Nota Total</td> 
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" name="tabs" class="rd_tabs" id="tab4">
-                    <span id="box-label"><label for="tab4">Turma <br>2D</label></span>
-                    <div class="content" id="content4">
-                        <table class="tabela-principal">
-                            <tr class="table-line">
-                               <td>ID do Aluno</td>
-                               <td>Aluno</td>
-                               <td>Faltas</td>
-                               <td>Nota Total</td> 
-                            </tr>
+                        <div class="box-search">
+                            <input type="text" class="input-search" placeholder="Aluno" id="input-aluno3">
+                            <input type="text" class="input-search" placeholder="Faltas" id="input-faltas3">
+                            <input type="text" class="input-search"  placeholder="Notas" id="input-notas3">
+                            <button onclick="aluno3.salvar3()" class="btn-salvar" id="btn3">Salvar</button>
+                            <button onclick="aluno3.cancelar()" class="btn-cancelar">Cancelar</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <th class="center">ID</th>
+                                <th>Aluno</th>
+                                <th>Faltas</th>
+                                <th>Notas</th>
+                                <th>Ações</th>
+                            </thead>
+                            <tbody id="tbody3">
+                                <tr></tr>
+                            </tbody>
                         </table>
                     </div>
                 </li>
@@ -168,6 +183,9 @@
 
     <!--Área de Scripts-->
     <script src="~/js/menu.js"></script>
+    <script src="~/js/content1.js"></script>
+    <script src="~/js/content2.js"></script>
+    <script src="~/js/content3.js"></script>
 </body>
 </html>
 

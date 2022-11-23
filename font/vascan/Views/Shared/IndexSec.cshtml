@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Links de font-->
+
+    <!--Links de fonte-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!--Link CSS-->
-    <link rel="stylesheet" href="~/css/indexAluno.css">
+    <link rel="stylesheet" href="~/css/indexSecretario.css">
     <link rel="stylesheet" href="~/css/root.css">
 
     <!--Link Icones do Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Vascan Aluno</title>
+    <title>Vascan Secretário</title>
 </head>
 
 <body>
@@ -29,11 +30,11 @@
                 <h2 class="ocultar">Vascan</h2>
             </div>
 
-            <span class="ocultar">Aluno</span>
+            <span class="ocultar">Secretário</span>
         </header>
 
         <ul class="menu-links">
-            <li class="link">
+            <li class="link pg_ativa">
                 <a href="#">
                     <i class="bi bi-house-door-fill" aria-hidden="true"></i>
                     <span class="ocultar">Inicio</span>
@@ -41,30 +42,30 @@
             </li>
 
             <li class="link">
-                <a href="#">
+                <a asp-controller="Home" asp-action="calendarioSec">
                     <i class="bi bi-calendar-fill" aria-hidden="true"></i>
                     <span class="ocultar">Calendário</span>
                 </a>
             </li>
 
             <li class="link">
-                <a href="#">
-                    <i class="bi bi-journals" aria-hidden="true"></i>
-                    <span class="ocultar">Disciplinas</span>
+                <a asp-controller="Home" asp-action="alunosSec">
+                    <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
+                    <span class="ocultar">Alunos</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a asp-controller="Home" asp-action="professorSec">
+                    <i class="bi bi-person-badge" aria-hidden="true"></i>
+                    <span class="ocultar">Professores</span>
                 </a>
             </li>
 
             <li class="link">
                 <a href="#">
-                    <i class="bi bi-graph-up" aria-hidden="true"></i>
-                    <span class="ocultar">Notas</span>
-                </a>
-            </li>
-
-            <li class="link">
-                <a asp-controller="Home" asp-action="secretariaAluno">
                     <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
-                    <span class="ocultar">Secretaria</span>
+                    <span class="ocultar">Solicitações</span>
                 </a>
             </li>
         </ul>
@@ -88,7 +89,7 @@
     <!--Cabeçalho-->
     <header class="body-cabecalho">
         <h1 class="title">Início</h1>
-        <a class="sair" asp-controller="Login" asp-action="Index">Sair</a>
+        <a class="sair" href="#">Sair</a>
     </header>
 
     <div class="body">
@@ -114,103 +115,27 @@
                 </div>
             </nav>
 
-            <div class="horario">
-                <h3 class="horario-titulo">Horário de Aula</h3>
-                <div class="quadro-de-horarios">
+            <div class="solicitacao">
+                <div class="solicitacao-titulo">
+                    <h3>Solicitações Pendentes</h3>
+                    <a href="#">Ver mais</a>
+                </div>
+                <div class="quadro-de-solicitacao">
 
-                    <div class="horario-dia">
-                        <span class="titulo-dia">Seg</span>
-                        <div class="aula">
-                            <p>Aula 1</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 2</p>
-                        </div>
-                        
-                        <div class="intervalo"></div>
-                        
-                        <div class="aula">
-                            <p>Aula 3</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 4</p>
-                        </div>
+                    <div class="solicitacao-pendente">
+                        <span class="ordem-solicitacao">1</span>
+                        <p class="qmPediu-solicitacao">Aluno</p>
+                        <p class="nomePessoa-solicitacao">Fulaninho de Tal</p>
+                        <p class="turma-cargo">Turma 2A</p>
+                        <p class="nome-solicitacao">Solicitação X</p>
                     </div>
                     
-                    <div class="horario-dia">
-                        <span class="titulo-dia">Ter</span>
-                        <div class="aula">
-                            <p>Aula 1</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 2</p>
-                        </div>
-                        
-                        <div class="intervalo"></div>
-                        
-                        <div class="aula">
-                            <p>Aula 3</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 4</p>
-                        </div>
-                    </div>
-
-                    <div class="horario-dia">
-                        <span class="titulo-dia">Qua</span>
-                        <div class="aula">
-                            <p>Aula 1</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 2</p>
-                        </div>
-                        
-                        <div class="intervalo"></div>
-                        
-                        <div class="aula">
-                            <p>Aula 3</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 4</p>
-                        </div>
-                    </div>
-
-                    <div class="horario-dia">
-                        <span class="titulo-dia">Qui</span>
-                        <div class="aula">
-                            <p>Aula 1</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 2</p>
-                        </div>
-                        
-                        <div class="intervalo"></div>
-                        
-                        <div class="aula">
-                            <p>Aula 3</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 4</p>
-                        </div>
-                    </div>
-
-                    <div class="horario-dia">
-                        <span class="titulo-dia">Sex</span>
-                        <div class="aula">
-                            <p>Aula 1</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 2</p>
-                        </div>
-                        
-                        <div class="intervalo"></div>
-                        
-                        <div class="aula">
-                            <p>Aula 3</p>
-                        </div>
-                        <div class="aula">
-                            <p>Aula 4</p>
-                        </div>
+                    <div class="solicitacao-pendente">
+                        <span class="ordem-solicitacao">2</span>
+                        <p class="qmPediu-solicitacao">Aluno</p>
+                        <p class="nomePessoa-solicitacao">Siclaninho de Tal</p>
+                        <p class="turma-cargo">Turma 2C</p>
+                        <p class="nome-solicitacao">Solicitação X</p>
                     </div>
 
                 </div>
@@ -244,10 +169,10 @@
             </div>
             
             <div class="tarefasdiarias">
-                <h3 class="tarefas-titulo">Lembretes</h3>
+                <h3 class="tarefas-titulo">Tarefas Diárias</h3>
 
                 <div class="form-tarefas">
-                    <input type="text" name="lembretes" id="lembretes" placeholder="Adicione um Lembrete">
+                    <input type="text" name="tarefas" id="tarefas" placeholder="Adicione uma Tarefa">
                     <button type="submit" >+</button>
                 </div>
             </div>
@@ -256,7 +181,7 @@
 
 
     <!--Área de Scripts-->
-    <script src="~/js/menu.js"></script>
+    <script src="/js/menu.js"></script>
 </body>
 </html>
 

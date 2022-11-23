@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links de font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="/css/alunosSec.css">
+    <link rel="stylesheet" href="/css/root.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+
+
+    <title>Alunos</title>
+</head>
+
+<body>
+    <!--Menu lateral-->
+    <nav class="menu-principal">
+        <header class="menu-cabecalho">
+            <div class="logo">
+                <div class="logoProvisoria"></div>
+                <h2 class="ocultar">Vascan</h2>
+            </div>
+
+            <span class="ocultar">Secretário</span>
+        </header>
+
+        <ul class="menu-links">
+            <li class="link">
+                <a asp-controller="Home" asp-action="indexSec">
+                    <i class="bi bi-house-door-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Inicio</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a asp-controller="Home" asp-action="CalendarioSec">
+                    <i class="bi bi-calendar-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Calendário</span>
+                </a>
+            </li>
+
+            <li class="link pg_ativa">
+                <a asp-controller="Home" asp-action="alunosSec">
+                    <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
+                    <span class="ocultar">Alunos</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a asp-controller="Home" asp-action="professorSec">
+                    <i class="bi bi-person-badge" aria-hidden="true"></i>
+                    <span class="ocultar">Professores</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Solicitações</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="btn-modoUsar">
+            <a href="#">
+                <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+                <span class="ocultar">Como usar</span>
+            </a>
+        </div>
+
+        <div class="btn-ocultar">
+            <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+            <span class="ocultar">Ocultar</span>
+        </div>
+    </nav>
+
+
+    <!--Aqui começa o "Corpo" da página-->
+
+    <!--Cabeçalho-->
+    <header class="body-cabecalho">
+        <h1 class="title">Alunos</h1>
+        <a class="sair" asp-controller="Login" asp-action="Index">Sair</a>
+    </header>
+
+    <div class="body">
+        <nav class="menu-pagina">
+
+            <!--Menu de navegação da página-->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <!--Link "Alunos Matriculados"-->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="alunosMatriculados-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true">Alunos Matriculados</button>
+                </li>
+
+                <!--Link "Matricular Alunos"-->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Matricular
+                        Alunos</button>
+                </li>
+            </ul>
+
+
+            <!--Conteúdo da página-->
+            <div class="tab-content" id="myTabContent">
+
+                <!--Alunos Matriculados-->
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                    aria-labelledby="alunosMatriculados-tab" tabindex="0">
+
+                    <div class="campo-pesquisa">
+                        <input type="text" name="pesquisaAluno" id="pesquisaAluno" placeholder="Pesquisar aluno">
+                        <button type="submit">Pesquisar</button>
+                    </div>
+
+                    <div class="corpo-tabela-alunos">
+                        <table class="tabela-alunos">
+                            <thead class="cabecalho-tabela-alunos">
+                                <tr>
+                                    <th class="id-aluno">ID do Aluno</th>
+                                    <th class="nome-aluno">Nome</th>
+                                    <th class="ano-aluno">Ano / Turno</th>
+                                    <th class="turma-aluno">Turma</th>
+                                    <th class="editar-aluno">Editar</th>
+                                    <th class="info-aluno">Informações do Aluno</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <tr class="aluno1">
+                                    <td class="id-aluno">1</td>
+                                    <td class="nome-aluno">Fulaninho de Tal da Silva</td>
+                                    <td class="ano-aluno">2º / Manhã</td>
+                                    <td class="turma-aluno">2B</td>
+                                    <td class="editar-aluno">
+                                        <button>
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </td>
+                                    <td class="info-aluno">
+                                        <button class="btn-info-aluno">Ver mais</button>
+                                    </td>
+                                </tr>
+
+                                <tr class="aluno2">
+                                    <td class="id-aluno">2</td>
+                                    <td class="nome-aluno">Siclaninho de Tal de Souza</td>
+                                    <td class="ano-aluno">2º / Manhã</td>
+                                    <td class="turma-aluno">2B</td>
+                                    <td class="editar-aluno">
+                                        <button>
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </td>
+                                    <td class="info-aluno">
+                                        <button class="btn-info-aluno">Ver mais</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="id-aluno"></td>
+                                    <td class="nome-aluno"></td>
+                                    <td class="ano-aluno"></td>
+                                    <td class="turma-aluno"></td>
+                                    <td class="editar-aluno">
+
+                                    </td>
+                                    <td class="info-aluno">
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+                <!--Matricular Alunos-->
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+
+                    <div class="area-matricula">
+                        <h2>Matricula de Aluno</h2>
+
+                        <form action="#" method="" class="formulario-matricula">
+
+                            <fieldset class="form-dadosP">
+                                <h3>Dados Pessoais</h3>
+
+                                <div class="inputs">
+                                    <label for="nomeAluno">Nome completo</label>
+                                    <br>
+                                    <input type="text" name="nomeAluno" id="nomeAluno">
+                                </div>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="dataNasc">Data de Nascimento</label>
+                                        <br>
+                                        <input type="date" name="dataNasc" id="dataNasc">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="sexo">Sexo</label>
+                                        <br>
+                                        <select name="sexo" id="sexo">
+                                            <option value=""></option>
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label>Tipo de Nacionalidade</label>
+                                        <br>
+                                        <label for="br">
+                                            <input type="radio" name="br" id="br">
+                                            Brasileiro(a)
+                                        </label>
+                                        <label for="estrang">
+                                            <input type="radio" name="estrang" id="estrang">
+                                            Estrangeiro(a)
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="nomeMae">Nome da Mãe</label>
+                                        <br>
+                                        <input type="text" name="nomeMae" id="nomeMae">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Nome do Responsável</label>
+                                        <br>
+                                        <input type="text" name="nomeResponsavel" id="nomeResponsavel">
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset class="form-documentos">
+                                <h3>Documentos</h3>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="rgAluno">Nº Identidade</label>
+                                        <br>
+                                        <input type="text" name="rgAluno" id="rgAluno">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="cpfAluno">CPF</label>
+                                        <br>
+                                        <input type="number" name="cpfAluno" id="cpfAluno">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="form-contatos">
+                                <h3>Contatos</h3>
+
+                                <fieldset class="contato-aluno">
+                                    <h4>Contato Aluno</h4>
+
+                                    <div class="grupo">
+                                        <div class="inputs">
+                                            <label for="emailAluno">Email</label>
+                                            <br>
+                                            <input type="email" name="emailAluno" id="emailAluno">
+                                        </div>
+
+                                        <div class="inputs">
+                                            <label for="telAluno">Telefone</label>
+                                            <br>
+                                            <input type="tel" name="telAluno" id="telAluno">
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="contato-pais">
+                                    <h4>Contato Responsavel</h4>
+                                    <div class="grupo">
+                                        <div class="inputs">
+                                            <label for="emailResponsavel">Email</label>
+                                            <br>
+                                            <input type="email" name="emailResponsavel" id="emailResponsavel">
+                                        </div>
+
+                                        <div class="inputs">
+                                            <label for="telResponsavel">Telefone</label>
+                                            <br>
+                                            <input type="tel" name="telResponsavel" id="telResponsavel">
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                            </fieldset>
+
+                            <fieldset class="form-endereco">
+                                <h3>Endereço</h3>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="">Rua/Avenida</label>
+                                        <input type="text" name="rua_av" id="rua_av">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Número</label>
+                                        <input type="number" name="numero_casa" id="numero_casa">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Complemento</label>
+
+                                        <input type="text" name="complemento_casa" id="complemento_casa">
+                                    </div>
+                                </div>
+                                <div class="inputs">
+                                    <label for="">CEP</label>
+                                    <br>
+                                    <input type="number" name="cep" id="cep">
+                                </div>
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="">Cidade</label>
+                                        <input type="text" name="cidade_casa" id="cidade_casa">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Bairro</label>
+                                        <input type="text" name="bairro" id="bairro">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Estado</label>
+                                        <input type="text" name="estado_casa" id="estado_casa">
+                                    </div>
+
+                            </fieldset>
+
+                            <fieldset class="acesso-aluno">
+                                <h3>Informações de Acesso do Aluno</h3>
+
+                                <div class="inputs">
+                                    <label for="usuarioAluno">Usuário</label>
+                                    <input type="email" name="usuarioAluno" id="usuarioAluno">
+                                </div>
+
+                                <div class="inputs">
+                                    <label for="senhaAluno">Senha</label>
+                                    <input type="text" name="senhaAluno" id="senhaAluno" readonly>
+
+                                    <button class="btn_gerarSenha">Gerar Senha</button>
+                                </div>
+
+                            </fieldset>
+
+                            <button type="submit" class="btn_salvarMatricula">Salvar Matricula</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <!--Modal Ver mais informações de Professores-->
+    <div id="alunoInfo1" class="modal-container">
+        <button class="modalCard-fechar">Fechar</button>
+        <div class="modalCard">
+            <div class="modalCard-conteudo">
+                <h2 class="conteudo-titulo">Fulaninho de Tal</h2>
+                <h3 class="conteudo-subtitulo">Turma 2A - 2º ano</h3>
+                <div class="conteudo-infos">
+
+                    <div class="infos-main">
+                        <div class="contato-info">
+                            <h4>Contato do Aluno</h4>
+                            <div class="contato-alunoinfo">
+                                <p><i class="bi bi-telephone"></i> (31) 97500-7070</p>
+                                <p><i class="bi bi-envelope"></i> fulaninho.aluno@gmail.com</p>
+                            </div>
+                            <h4>Contato do Responsável</h4>
+                            <div class="contato-paiinfo">
+                                <p><i class="bi bi-telephone"></i> (31) 97500-7070</p>
+                                <p><i class="bi bi-envelope"></i> fulana@gmail.com</p>
+                            </div>
+                            <p><i class="bi bi-geo-alt"></i> Rua Fictícia Um, 2022 - Eldorado, Contagem</p>
+                        </div>
+
+                        <div class="acesso-info">
+
+                            <label for="usuario-info">Usuário</label>
+                            <br>
+                            <input type="text" name="usuario-info" id="usuario-info" readonly
+                                value="fulaninho.aluno@gmail.com">
+
+                            <fieldset>
+                                <label for="senha-info">Senha</label>
+                                <br>
+                                <input type="password" name="senha-info" id="senha-info" value="senha1234">
+                                <i class="bi bi-eye-fill"></i>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="infos-detalhes">
+                        <h4>Detalhes</h4>
+
+                        <fieldset class="info-aulas">
+                            <p><strong>Turma: </strong>2A</p>
+                            <p><strong>Ano: </strong>2º</p>
+                        </fieldset>
+
+                        <fieldset class="info-pessoal">
+                            <p><strong>Nome completo: </strong>Fulaninho de Tal da Silva</p>
+                            <div>
+                                <p><strong>Nascimento: </strong>21/10/2006</p>
+                                <p><strong>Nacionalidade: </strong>Brasileiro(a)</p>
+                                <p><strong>Sexo: </strong>Masculino</p>
+                            </div>
+                            <div>
+                                <p><strong>RG: </strong>MG-00.000.000</p>
+                                <p><strong>CPF: </strong>000.000.000-00</p>
+                            </div>
+                            <div>
+                                <p><strong>Nome da Mãe: </strong>Fulana da Silva Souza</p>
+                                <p><strong>Nome do Responsável: </strong>Fulana da Silva Souza</p>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="alunoInfo2" class="modal-container">
+        <button class="modalCard-fechar">Fechar</button>
+        <div class="modalCard">
+            <div class="modalCard-conteudo">
+                <h2 class="conteudo-titulo">Siclaninho de Tal</h2>
+                <h3 class="conteudo-subtitulo">Turma 2A - 2º ano</h3>
+                <div class="conteudo-infos">
+
+                    <div class="infos-main">
+                        <div class="contato-info">
+                            <h4>Contato do Aluno</h4>
+                            <div class="contato-alunoinfo">
+                                <p><i class="bi bi-telephone"></i> (31) 97500-7070</p>
+                                <p><i class="bi bi-envelope"></i> siclaninho.aluno@gmail.com</p>
+                            </div>
+                            <h4>Contato do Responsável</h4>
+                            <div class="contato-paiinfo">
+                                <p><i class="bi bi-telephone"></i> (31) 97500-7070</p>
+                                <p><i class="bi bi-envelope"></i>fulana@gmail.com</p>
+                            </div>
+                            <p><i class="bi bi-geo-alt"></i> Rua Fictícia Um, 2022 - Eldorado, Contagem</p>
+                        </div>
+
+                        <div class="acesso-info">
+
+                            <label for="usuario-info">Usuário</label>
+                            <br>
+                            <input type="text" name="usuario-info" id="usuario-info" readonly
+                                value="siclaninho.aluno@gmail.com">
+
+                            <fieldset>
+                                <label for="senha-info">Senha</label>
+                                <br>
+                                <input type="password" name="senha-info" id="senha-info" value="senha1234">
+                                <i class="bi bi-eye-fill"></i>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="infos-detalhes">
+                        <h4>Detalhes</h4>
+
+                        <fieldset class="info-aulas">
+                            <p><strong>Turma: </strong>2A</p>
+                            <p><strong>Ano: </strong>2º</p>
+                        </fieldset>
+
+                        <fieldset class="info-pessoal">
+                            <p><strong>Nome completo: </strong>Siclaninho de Tal de Souza</p>
+                            <div>
+                                <p><strong>Nascimento: </strong>21/10/2006</p>
+                                <p><strong>Nacionalidade: </strong>Brasileiro(a)</p>
+                                <p><strong>Sexo: </strong>Masculino</p>
+                            </div>
+                            <div>
+                                <p><strong>RG: </strong>MG-00.000.000</p>
+                                <p><strong>CPF: </strong>000.000.000-00</p>
+                            </div>
+                            <div>
+                                <p><strong>Nome da Mãe: </strong>Fulana da Silva Souza</p>
+                                <p><strong>Nome do Responsável: </strong>Fulana da Silva Souza</p>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Área de Scripts-->
+    <script src="~/js/menu.js"></script>
+    <script src="~/js/modalAluno.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

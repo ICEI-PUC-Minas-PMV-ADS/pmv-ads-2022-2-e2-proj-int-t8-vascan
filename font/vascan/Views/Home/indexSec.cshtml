@@ -34,7 +34,7 @@
         </header>
 
         <ul class="menu-links">
-            <li class="link">
+            <li class="link pg_ativa">
                 <a href="#">
                     <i class="bi bi-house-door-fill" aria-hidden="true"></i>
                     <span class="ocultar">Inicio</span>
@@ -42,30 +42,30 @@
             </li>
 
             <li class="link">
-                <a href="#">
+                <a asp-controller="Home" asp-action="calendarioSec">
                     <i class="bi bi-calendar-fill" aria-hidden="true"></i>
                     <span class="ocultar">Calendário</span>
                 </a>
             </li>
 
             <li class="link">
-                <a href="#">
-                    <i class="bi bi-folder2" aria-hidden="true"></i>
-                    <span class="ocultar">Turmas</span>
+                <a asp-controller="Home" asp-action="alunosSec">
+                    <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
+                    <span class="ocultar">Alunos</span>
                 </a>
             </li>
 
             <li class="link">
-                <a href="#">
-                    <i class="bi bi-clipboard-data" aria-hidden="true"></i>
-                    <span class="ocultar">Avaliações</span>
+                <a asp-controller="Home" asp-action="professorSec">
+                    <i class="bi bi-person-badge" aria-hidden="true"></i>
+                    <span class="ocultar">Professores</span>
                 </a>
             </li>
 
             <li class="link">
                 <a href="#">
                     <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
-                    <span class="ocultar">Secretaria</span>
+                    <span class="ocultar">Solicitações</span>
                 </a>
             </li>
         </ul>
@@ -89,12 +89,10 @@
     <!--Cabeçalho-->
     <header class="body-cabecalho">
         <h1 class="title">Início</h1>
-        @*<a class="sair" href="#">@Html.ActionLink("Sair", "Index", "Login", null, new { @class = "sair" });</a>*@
         <a class="sair" asp-controller="Login" asp-action="Index">Sair</a>
     </header>
 
     <div class="body">
-
 
         <main class="container-principal">
             <div class="boasvindas">

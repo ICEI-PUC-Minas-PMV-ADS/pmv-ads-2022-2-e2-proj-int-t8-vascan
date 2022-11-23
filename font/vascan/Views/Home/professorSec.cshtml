@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links de font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="~/css/professorSec.css">
+    <link rel="stylesheet" href="~/css/root.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+
+
+    <title>Professores</title>
+</head>
+
+<body>
+    <!--Menu lateral-->
+    <nav class="menu-principal">
+        <header class="menu-cabecalho">
+            <div class="logo">
+                <div class="logoProvisoria"></div>
+                <h2 class="ocultar">Vascan</h2>
+            </div>
+
+            <span class="ocultar">Secretário</span>
+        </header>
+
+        <ul class="menu-links">
+            <li class="link">
+                <a href="./indexSec.html">
+                    <i class="bi bi-house-door-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Inicio</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="./calendarioSec.html">
+                    <i class="bi bi-calendar-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Calendário</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="./alunosSec.html">
+                    <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
+                    <span class="ocultar">Alunos</span>
+                </a>
+            </li>
+
+            <li class="link pg_ativa">
+                <a href="./professorSec.html">
+                    <i class="bi bi-person-badge" aria-hidden="true"></i>
+                    <span class="ocultar">Professores</span>
+                </a>
+            </li>
+
+            <li class="link">
+                <a href="#">
+                    <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
+                    <span class="ocultar">Solicitações</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="btn-modoUsar">
+            <a href="#">
+                <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+                <span class="ocultar">Como usar</span>
+            </a>
+        </div>
+
+        <div class="btn-ocultar">
+            <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+            <span class="ocultar">Ocultar</span>
+        </div>
+    </nav>
+
+
+    <!--Aqui começa o "Corpo" da página-->
+
+    <!--Cabeçalho-->
+    <header class="body-cabecalho">
+        <h1 class="title">Professores</h1>
+        <a class="sair" href="#">Sair</a>
+    </header>
+
+    <div class="body">
+        <nav class="menu-pagina">
+
+            <!--Menu de navegação da página-->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <!--Link "Professores"-->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="professores-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true">Professores</button>
+                </li>
+
+                <!--Link "Cadastrar Professores"-->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cadastrar
+                        Professores</button>
+                </li>
+            </ul>
+
+
+            <!--Conteúdo da página-->
+            <div class="tab-content" id="myTabContent">
+
+                <!--Professor Cadastrado-->
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                    aria-labelledby="professores-tab" tabindex="0">
+
+                    <div class="campo-pesquisa">
+                        <input type="text" name="pesquisaProfessor" id="pesquisaProfessor"
+                            placeholder="Pesquisar Professor">
+                        <button type="submit">Pesquisar</button>
+                    </div>
+
+                    <!--Tabela-->
+                    <div class="corpo-tabela-Professor">
+
+                        <table class="tabela-Professor">
+                            <thead class="cabecalho-tabela-Professor">
+                                <tr>
+                                    <th class="id-Professor">ID do Professor</th>
+                                    <th class="nome-Professor">Nome</th>
+                                    <th class="disciplina-Professor">Disciplina</th>
+                                    <th class="ano-Professor">Ano</th>
+                                    <th class="turmas-Professor">Turmas</th>
+                                    <th class="editar-Professor">Editar</th>
+                                    <th class="info-Professor">Informações</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="prof1">
+                                    <td class="id-Professor">1</td>
+                                    <td class="nome-Professor">Fulaninho de Tal da Silva</td>
+                                    <td class="disciplina-Professor">Artes</td>
+                                    <td class="ano-Professor">2º e 3º</td>
+                                    <td class="turmas-Professor">2A, 2B, 3A, 3B</td>
+                                    <td class="editar-Professor">
+                                        <button>
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </td>
+                                    <td class="info-Professor">
+                                        <button class="btn-info-Professor">Ver mais</button>
+                                    </td>
+                                </tr>
+
+                                <tr class="prof2">
+                                    <td class="id-Professor">2</td>
+                                    <td class="nome-Professor">Siclaninho de Tal de Souza</td>
+                                    <td class="disciplina-Professor">Matemática</td>
+                                    <td class="ano-Professor">2º e 3º</td>
+                                    <td class="turmas-Professor">2A, 2B, 3A, 3B</td>
+                                    <td class="editar-Professor">
+                                        <button>
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </td>
+                                    <td class="info-Professor">
+                                        <button class="btn-info-Professor">Ver mais</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="id-Professor"></td>
+                                    <td class="nome-Professor"></td>
+                                    <td class="disciplina-Professor"></td>
+                                    <td class="ano-Professor"></td>
+                                    <td class="editar-Professor">
+
+                                    </td>
+                                    <td class="turmas-Professor"></td>
+                                    <td class="info-Professor">
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+                <!--Matricular Professor-->
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+
+                    <div class="area-matricula">
+                        <h2>Cadastro de Professor</h2>
+
+                        <form action="#" method="" class="formulario-matricula">
+
+                            <fieldset class="form-dadosP">
+                                <h3>Dados Pessoais</h3>
+
+                                <div class="inputs">
+                                    <label for="nomeProfessor">Nome completo</label>
+                                    <br>
+                                    <input type="text" name="nomeProfessor" id="nomeProfessor">
+                                </div>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="dataNasc">Data de Nascimento</label>
+                                        <br>
+                                        <input type="date" name="dataNasc" id="dataNasc">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="sexo">Sexo</label>
+                                        <br>
+                                        <select name="sexo" id="sexo">
+                                            <option value=""></option>
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label>Tipo de Nacionalidade</label>
+                                        <br>
+                                        <label for="br">
+                                            <input type="radio" name="br" id="br">
+                                            Brasileiro(a)
+                                        </label>
+                                        <label for="estrang">
+                                            <input type="radio" name="estrang" id="estrang">
+                                            Estrangeiro(a)
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="disciplina">Disciplina Lecionada</label>
+                                        <br>
+                                        <input type="text" name="disciplina" id="disciplina">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="ano_turmas">Ano das turmas</label>
+                                        <br>
+                                        <input type="number" name="ano_turmas" id="ano_turmas">
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset class="form-documentos">
+                                <h3>Documentos</h3>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="rgProfessor">Nº Identidade</label>
+                                        <br>
+                                        <input type="text" name="rgProfessor" id="rgProfessor">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="cpfProfessor">CPF</label>
+                                        <br>
+                                        <input type="number" name="cpfProfessor" id="cpfProfessor">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="form-contatos">
+                                <h3>Contatos</h3>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="emailProfessor">Email</label>
+                                        <br>
+                                        <input type="email" name="emailProfessor" id="emailProfessor">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="telProfessor">Telefone</label>
+                                        <br>
+                                        <input type="tel" name="telProfessor" id="telProfessor">
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset class="form-endereco">
+                                <h3>Endereço</h3>
+
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="">Rua/Avenida</label>
+                                        <input type="text" name="rua_av" id="rua_av">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Número</label>
+                                        <input type="number" name="numero_casa" id="numero_casa">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Complemento</label>
+
+                                        <input type="text" name="complemento_casa" id="complemento_casa">
+                                    </div>
+                                </div>
+                                <div class="inputs">
+                                    <label for="">CEP</label>
+                                    <br>
+                                    <input type="number" name="cep" id="cep">
+                                </div>
+                                <div class="grupo">
+                                    <div class="inputs">
+                                        <label for="">Cidade</label>
+                                        <input type="text" name="cidade_casa" id="cidade_casa">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Bairro</label>
+                                        <input type="text" name="bairro" id="bairro">
+                                    </div>
+
+                                    <div class="inputs">
+                                        <label for="">Estado</label>
+                                        <input type="text" name="estado_casa" id="estado_casa">
+                                    </div>
+
+                            </fieldset>
+
+                            <fieldset class="acesso-Professor">
+                                <h3>Informações de Acesso do Professor</h3>
+
+                                <div class="inputs">
+                                    <label for="usuarioProfessor">Usuário</label>
+                                    <input type="email" name="usuarioProfessor" id="usuarioProfessor">
+                                </div>
+
+                                <div class="inputs">
+                                    <label for="senhaProfessor">Senha</label>
+                                    <input type="text" name="senhaProfessor" id="senhaProfessor" readonly>
+
+                                    <button class="btn_gerarSenha">Gerar Senha</button>
+                                </div>
+
+                            </fieldset>
+
+                            <button type="submit" class="btn_salvarMatricula">Salvar Cadastro</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <!--Modal Ver mais informações de Professores-->
+    <div id="profInfo1" class="modal-container">
+        <div class="modalCard">
+            <button class="modalCard-fechar">Fechar</button>
+            <div class="modalCard-conteudo">
+                <h2 class="conteudo-titulo">Professor Fulaninho</h2>
+                <h3 class="conteudo-subtitulo">Prof. de Artes</h3>
+                <div class="conteudo-infos">
+
+                    <div class="infos-main">
+                        <div class="contato-info">
+                            <p><i class="bi bi-telephone"></i> (31) 97500-7070</p>
+                            <p><i class="bi bi-envelope"></i> fulaninho.prof@gmail.com</p>
+                            <p><i class="bi bi-geo-alt"></i> Rua Fictícia Um, 2022 - Eldorado, Contagem</p>
+                        </div>
+
+                        <div class="acesso-info">
+
+                            <label for="usuario-info">Usuário</label>
+                            <br>
+                            <input type="text" name="usuario-info" id="usuario-info" readonly
+                                value="fulaninho.prof@gmail.com">
+
+                            <fieldset>
+                                <label for="senha-info">Senha</label>
+                                <br>
+                                <input type="password" name="senha-info" id="senha-info" value="senha1234">
+                                <i class="bi bi-eye-fill"></i>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="infos-detalhes">
+                        <h4>Detalhes</h4>
+
+                        <fieldset class="info-aulas">
+                            <p><strong>Disciplina: </strong>Artes</p>
+                            <p><strong>Ano: </strong>2º e 3º</p>
+                            <p><strong>Turmas: </strong>2A, 2B, 3A, 3B</p>
+                        </fieldset>
+
+                        <fieldset class="info-pessoal">
+                            <p><strong>Nome completo: </strong>Fulaninho de Tal da Silva</p>
+                            <div>
+                                <p><strong>Nascimento: </strong>21/10/1973</p>
+                                <p><strong>Nacionalidade: </strong>Brasileiro(a)</p>
+                                <p><strong>Sexo: </strong>Masculino</p>
+                            </div>
+                            <div>
+                                <p><strong>RG: </strong>MG-00.000.000</p>
+                                <p><strong>CPF: </strong>000.000.000-00</p>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profInfo2" class="modal-container">
+        <div class="modalCard">
+            <button class="modalCard-fechar">Fechar</button>
+            <div class="modalCard-conteudo">
+                <h2 class="conteudo-titulo">Professor Siclaninho</h2>
+                <h3 class="conteudo-subtitulo">Prof. de Matemática</h3>
+                <div class="conteudo-infos">
+
+                    <div class="infos-main">
+                        <div class="contato-info">
+                            <p><i class="bi bi-telephone"></i> (31) 97500-7070</p>
+                            <p><i class="bi bi-envelope"></i> siclaninho.prof@gmail.com</p>
+                            <p><i class="bi bi-geo-alt"></i> Rua Fictícia Um, 2022 - Eldorado, Contagem</p>
+                        </div>
+
+                        <div class="acesso-info">
+
+                            <label for="usuario-info">Usuário</label>
+                            <br>
+                            <input type="text" name="usuario-info" id="usuario-info" readonly
+                                value="siclaninho.prof@gmail.com">
+
+                            <fieldset>
+                                <label for="senha-info">Senha</label>
+                                <br>
+                                <input type="password" name="senha-info" id="senha-info" value="senha1234">
+                                <i class="bi bi-eye-fill"></i>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="infos-detalhes">
+                        <h4>Detalhes</h4>
+
+                        <fieldset class="info-aulas">
+                            <p><strong>Disciplina: </strong>Matemática</p>
+                            <p><strong>Ano: </strong>2º e 3º</p>
+                            <p><strong>Turmas: </strong>2A, 2B, 3A, 3B</p>
+                        </fieldset>
+
+                        <fieldset class="info-pessoal">
+                            <p><strong>Nome completo: </strong>Siclaninho de Tal de Souza</p>
+                            <div>
+                                <p><strong>Nascimento: </strong>21/10/1973</p>
+                                <p><strong>Nacionalidade: </strong>Brasileiro(a)</p>
+                                <p><strong>Sexo: </strong>Masculino</p>
+                            </div>
+                            <div>
+                                <p><strong>RG: </strong>MG-00.000.000</p>
+                                <p><strong>CPF: </strong>000.000.000-00</p>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Área de Scripts-->
+    <script src="~/js/menu.js"></script>
+    <script src="~/js/modalProfessor.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

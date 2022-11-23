@@ -38,7 +38,7 @@ namespace vascan.Controllers
                         {
                             if (tipo == "secretario")
                             {
-                                return RedirectToAction("indexSec", "Home");
+                                return RedirectToAction("IndexSec", "Home");
                             }
                             if (tipo == "aluno")
                             {
