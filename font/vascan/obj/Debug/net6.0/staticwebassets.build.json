@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+1g5EkwwrpRKXiqxpzhjlEVyNtCdBhIp39ZWJMbgMf8=",
+  "Hash": "kJdA8O2MC5f/50Y+bpd1+EHInqYwgSWdToXbFf7TYAw=",
   "Source": "vascan",
   "BasePath": "_content/vascan",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\css\\vascanlogin.css",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "css/vascanlogin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\vascanlogin.css"
     },
     {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\favicon.ico",
