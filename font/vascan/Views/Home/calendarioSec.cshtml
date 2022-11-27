@@ -12,12 +12,12 @@
         rel="stylesheet">
 
     <!--Link CSS-->
-    <link rel="stylesheet" href="/css/calendarioSec.css">
-    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="~/css/calendarioSec.css">
+    <link rel="stylesheet" href="~/css/root.css">
 
     <!--Link Icones do Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
 
     <title>Secretaria</title>
 </head>
@@ -50,7 +50,7 @@
             </li>
 
             <li class="link">
-                <a asp-controller="Home" asp-action="AlunosSec">
+                <a asp-controller="Home" asp-action="alunosSec">
                     <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
                     <span class="ocultar">Alunos</span>
                 </a>
@@ -90,7 +90,8 @@
     <!--Cabeçalho-->
     <header class="body-cabecalho">
         <h1 class="title">Secretaria</h1>
-        <a class="sair" asp-controller="Login" asp-action="Index">Sair</a>
+        <a class="sair" asp-controller="Login" asp-action="Index"
+        >Sair</a>
     </header>
 
     <!--Corpo-->
@@ -198,8 +199,57 @@
         </main>
 
         <aside class="container-aside">
-            <div class="calendario-container">
-                <h3>Calendário</h3>
+            <div class="">
+                <div id="container">
+                    <div id="header">
+                        <div>
+                            <button id="backButton"><i class="bi bi-caret-left-fill"></i></button>
+                        </div>
+
+                        <div id="monthDisplay"></div>
+
+                        <div>
+                            <button id="nextButton"><i class="bi bi-caret-right-fill"></i></button>
+                        </div>
+                    </div>
+
+                    <div id="weekdays">
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sáb</div>
+                    </div>
+
+
+                    <!-- div dinamic -->
+                    <div id="calendar"></div>
+
+
+                </div>
+
+                <div id="newEventModal">
+                    <h2>New Evente</h2>
+
+                    <input id="eventTitleInput" placeholder="Event Title" />
+
+                    <button id="saveButton"> Salvar</button>
+                    <button id="cancelButton">Cancelar</button>
+                </div>
+
+                <div id="deleteEventModal">
+                    <h2>Evento</h2>
+
+                    <div id="eventText"></div><br>
+
+
+                    <button id="deleteButton">Deletar</button>
+                    <button id="closeButton">Fechar</button>
+                </div>
+
+                <div id="modalBackDrop"></div>
             </div>
 
             <div class="agenda">
@@ -243,13 +293,13 @@
                         <label for="data">Data do Evento</label> <br>
                         <input type="date" name="data" id="data">
                     </div>
-                    
+
                     <div class="input-container">
                         <label for="data">Data de Encerramento</label> <br>
                         <input type="date" name="data" id="data">
                     </div>
 
-                    
+
                 </div>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
@@ -260,9 +310,9 @@
     <!--Área de Scripts-->
     <script src="~/js/menu.js"></script>
     <script src="~/js/modalAddEvento.js"></script>
+    <script src="~/js/calen.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>
 
 <!--Elementos que estão com *class="ocultar"*, são elementos que não ficarão visíveis quando o menu fechar-->

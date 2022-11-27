@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VE78ILBs/mluPWUB/+uTw60VmoBZTRHQFc8GFziOIx0=",
+  "Hash": "+1g5EkwwrpRKXiqxpzhjlEVyNtCdBhIp39ZWJMbgMf8=",
   "Source": "vascan",
   "BasePath": "_content/vascan",
   "Mode": "Default",
@@ -170,6 +170,23 @@
       "OriginalItemSpec": "wwwroot\\css\\professorTurmas.css"
     },
     {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\css\\responsividade.css",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "css/responsividade.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\responsividade.css"
+    },
+    {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\css\\root.css",
       "SourceId": "vascan",
       "SourceType": "Discovered",
@@ -255,6 +272,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\delete.svg",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "img/delete.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\delete.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\edit.svg",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "img/edit.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\edit.svg"
+    },
+    {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\imgAula.jpg",
       "SourceId": "vascan",
       "SourceType": "Discovered",
@@ -287,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\imgCinza.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\js\\calen.js",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "js/calen.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\calen.js"
     },
     {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\js\\content1.js",
@@ -474,6 +542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\submit.js"
+    },
+    {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\js\\todoList.js",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "js/todoList.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\todoList.js"
     },
     {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",

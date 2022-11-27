@@ -13,6 +13,7 @@
 
     <!--Link CSS-->
     <link rel="stylesheet" href="~/css/indexSecretario.css">
+    <link rel="stylesheet" href="~/css/responsividade.css">
     <link rel="stylesheet" href="~/css/root.css">
 
     <!--Link Icones do Bootstrap-->
@@ -33,42 +34,42 @@
             <span class="ocultar">Secretário</span>
         </header>
 
-        <ul class="menu-links">
-            <li class="link pg_ativa">
-                <a href="#">
+        <div class="menu-links">
+            <div class="link pg_ativa">
+                <a asp-controller="Home" asp-action="indexSec">
                     <i class="bi bi-house-door-fill" aria-hidden="true"></i>
                     <span class="ocultar">Inicio</span>
                 </a>
-            </li>
+            </div>
 
-            <li class="link">
+            <div class="link">
                 <a asp-controller="Home" asp-action="calendarioSec">
                     <i class="bi bi-calendar-fill" aria-hidden="true"></i>
                     <span class="ocultar">Calendário</span>
                 </a>
-            </li>
+            </div>
 
-            <li class="link">
+            <div class="link">
                 <a asp-controller="Home" asp-action="alunosSec">
                     <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
                     <span class="ocultar">Alunos</span>
                 </a>
-            </li>
+            </div>
 
-            <li class="link">
+            <div class="link">
                 <a asp-controller="Home" asp-action="professorSec">
                     <i class="bi bi-person-badge" aria-hidden="true"></i>
                     <span class="ocultar">Professores</span>
                 </a>
-            </li>
+            </div>
 
-            <li class="link">
+            <div class="link">
                 <a href="#">
                     <i class="bi bi-clipboard-fill" aria-hidden="true"></i>
                     <span class="ocultar">Solicitações</span>
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
 
         <div class="btn-modoUsar">
             <a href="#">
@@ -109,9 +110,9 @@
             <nav class="atalhos">
                 <h3 class="atalho-titulo">Atalhos</h3>
                 <div class="atalhos-link">
-                    <a href="#" class="linkatalho"></a>
-                    <a href="#" class="linkatalho"></a>
-                    <a href="#" class="linkatalho"></a>
+                    <a asp-controller="Home" asp-action="calendarioSec" class="linkatalho">Adicionar Evento</a>
+                    <a asp-controller="Home" asp-action="alunosSec"  class="linkatalho"> Matricular Aluno</a>
+                    <a asp-controller="Home" asp-action="professorSec" class="linkatalho">Lista de Professores</a>
                 </div>
             </nav>
 
@@ -165,16 +166,20 @@
                     <p class="texto-tarefa">Lorem ipsum</p>
                 </div>
 
-                <a href="#">Ver tudo em Calendário</a>
+                <a asp-controller="Home" asp-action="calendarioSec">Ver tudo em Calendário</a>
             </div>
             
             <div class="tarefasdiarias">
-                <h3 class="tarefas-titulo">Tarefas Diárias</h3>
+                <div class="header">
+                    <h3 class="tarefas-titulo">Lembretes</h3>
+                    <button class="btn-invisivel"></button>
+                </div>
 
                 <div class="form-tarefas">
-                    <input type="text" name="tarefas" id="tarefas" placeholder="Adicione uma Tarefa">
-                    <button type="submit" >+</button>
+                    <input type="text" name="lembretes" id="lembretes" placeholder="Adicione um Lembrete">
+                    <button class="btnInsert">+</button>
                 </div>
+                <ul></ul>
             </div>
         </aside>
     </div>
@@ -182,6 +187,7 @@
 
     <!--Área de Scripts-->
     <script src="~/js/menu.js"></script>
+    <script src="~/js/todoList.js"></script>
 </body>
 </html>
 

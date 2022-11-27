@@ -1,0 +1,297 @@
+@media(max-width: 425px) {
+
+    /*PÁGINAS INÍCIO*/
+
+    /*menu aberto*/
+    body.fechar .menu {
+        width: 40vw;
+    }
+
+    body.fechar .link a,
+    body.fechar .btn-ocultar {
+        width: 22vw
+    }
+
+    body.fechar .btn-ocultar {
+        padding: 2.5vh 3vw;
+    }
+
+    body.fechar .btn-ocultar i {
+        font-size: 4vw;
+        margin-right: 1vw;
+    }
+
+    /*Menu Fechado*/
+    .menu {
+        width: 15vw;
+        display: fixed;
+    }
+
+    /*Cabeçalho do menu*/
+    .menu-cabecalho {
+        margin: 5vh 0;
+    }
+
+    .logoProvisoria {
+        width: 8.2vw;
+        height: 4vh;
+        margin-right: 2vw;
+    }
+
+    .logo>h2 {
+        font-size: 3vw;
+    }
+
+
+    /*Área de links do menu*/
+    .menu-links {
+        margin-bottom: 6vh;
+    }
+
+    .link {
+        margin-bottom: 2.5vh;
+        align-items: center;
+    }
+
+    .link a {
+        width: 13vw;
+        padding: 2.5vh 2vw;
+    }
+
+    .link i {
+        font-size: 5vw;
+    }
+
+    .btn-modoUsar i,
+    .btn-ocultar i {
+        font-size: 3.8vw;
+    }
+
+    .link span {
+        margin-left: 2vw;
+        font-size: 3vw;
+    }
+
+    .btn-modoUsar {
+        margin-bottom: 9vh;
+    }
+
+    .btn-modoUsar a {
+        padding: 2vh 4vw;
+    }
+
+    .btn-modoUsar span,
+    .btn-ocultar span {
+        margin-left: 2vw;
+        font-size: 2.5vw;
+    }
+
+
+    /*Cabeçalho*/
+    .title {
+        margin-left: 24vw;
+        font-size: 4vw;
+    }
+
+    .sair {
+        margin-right: 12vw;
+        font-size: 3vw;
+    }
+
+    /*Configuração do corpo da página*/
+    .body {
+        margin: 4vh 10vw 6vh 24vw;
+        grid-gap: 5vw;
+    }
+
+    .container-principal,
+    .container-aside {
+        width: 65vw;
+    }
+
+
+    /*Container de Boas-Vindas*/
+    .boasvindas {
+        width: 100%;
+        height: 22vh;
+        margin-top: 0;
+        margin-bottom: 6vh;
+        padding: 4vw;
+    }
+
+    .texto-boasvindas {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .texto-boasvindas h2 {
+        font-size: 3vw;
+    }
+
+    .texto-boasvindas p {
+        font-size: 2.5vw;
+    }
+
+    .ilustracao-boasvindas {
+        display: none;
+    }
+
+
+    /*Atalhos*/
+    .atalhos {
+        margin-bottom: 6vh;
+    }
+
+    .linkatalho {
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .atalho-titulo,
+    .solicitacao-titulo h3,
+    .agenda-titulo,
+    .tarefas-titulo,
+    .horario-titulo {
+        margin-bottom: 2vh;
+        font-size: 3vw;
+        font-weight: 600;
+    }
+
+
+    /*Quadro de Solicitações */
+    .quadro-de-solicitacao {
+        width: 100%;
+        height: 30vh;
+        display: grid;
+    }
+
+    /*Horário de aula*/
+    .quadro-de-horarios {
+        width: 100%;
+        height: 45vh;
+        display: grid;
+    }
+
+    .titulo-dia {
+        font-size: 2.8vw;
+        margin-bottom: 2vh;
+    }
+
+    .aula {
+        padding: 2.4vh 1vw;
+        width: 10vw;
+    }
+
+    .aula p {
+        font-size: 2.5vw;
+    }
+
+    .solicitacao-pendente {
+        grid-template-columns: 0.6fr 1.5fr 0.8fr 1.3fr;
+        height: 7vh;
+    }
+
+    .solicitacao-pendente p {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    .solicitacao-pendente span {
+        display: none;
+    }
+
+
+    /*Agenda*/
+    .agenda {
+        width: 100%;
+        height: 38vh;
+        padding: 3vh 7vw;
+        margin-bottom: 6vh;
+    }
+
+    .tarefas {
+        width: 100%;
+    }
+
+    .data {
+        padding-right: 4vw;
+    }
+
+    .data-tarefa {
+        margin-bottom: 0vh;
+        font-size: 14px;
+    }
+
+    .texto-tarefa {
+        padding-left: 4vw;
+        font-size: 11px;
+    }
+
+    .agenda a {
+        margin-top: 4vh;
+    }
+
+
+    /*Tarefas Diárias*/
+    .tarefasdiarias {
+        width: 100%;
+        height: 64vh;
+        padding: 3vh 4vw;
+    }
+
+
+
+    /*PÁGINAS DE SECRETARIA - ALUNO E PROF*/
+    .menu-pagina .nav-tabs .nav-item.show .nav-link,
+    .menu-pagina .nav-tabs .nav-link.active {
+        font-size: 3vw;
+    }
+
+    .menu-pagina .nav-tabs .nav-link {
+        font-size: 3vw;
+    }
+
+    .btn-solicitar {
+        position: initial;
+    }
+
+    .accordion-body {
+        height: 49vh;
+        padding-top: 3vh !important;
+        display: block;
+    }
+
+    .solicitacao-container {
+        width: 100%;
+        height: 70vh;
+        margin-left: 0;
+        padding-right: 0;
+        overflow-y: scroll;
+    }
+
+    .detalhes-solicitacao {
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    .container-status-solicitacao {
+        width: 100%;
+        margin-left: 2vw;
+    }
+    .status-bolinha {
+        width: 7.8vw;
+    }
+    .status-barrinha {
+        width: 1.4vw;
+        height: 2vh;
+        left: 3.2vw;
+    }
+    .detalhes-solicitacao h3, .container-status-solicitacao h3 {
+        font-size: 3vw;
+    }
+
+
+    /**/
+
+
+}
