@@ -38,9 +38,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-001| Área de Login | MÉDIA | 
 |RF-002| Área especificando usuário   | BAIXA |
 |RF-003| Menu de função distinto para cada perfil   | ALTA |
-|RF-004| Enviar e-mail de notificação de solicitação iniciada e finalizada   | MÉDIA |
-|RF-005| Atualização das solicitações feitas no portal   | BAIXA |
-|RF-006| Calendário letivo funcional   | ALTA |
+|RF-004| Atualização das solicitações feitas no portal   | BAIXA |
+|RF-005| Calendário letivo funcional   | ALTA |
 
 
 ### Requisitos não Funcionais
