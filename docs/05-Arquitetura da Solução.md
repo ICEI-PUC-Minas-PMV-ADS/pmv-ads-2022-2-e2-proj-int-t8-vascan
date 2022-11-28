@@ -21,3 +21,9 @@ Enquanto o MER é um modelo conceitual, o Diagrama Entidade Relacionamento (Diag
 
 ![diagramaER](https://user-images.githubusercontent.com/53317747/193429025-f097643c-1f1b-42f2-901b-b39ce840b999.jpeg)
 
+## Hospedagem
+O site utiliza a plataforma do Heroku como ambiente de hospedagem do site do projeto. O site é mantido no ambiente da URL: 
+
+Vascan (btempurl.com)
+
+A publicação do site no Heroku é feita por meio de uma submissão do projeto (push) via git para o repositório remoto que se encontra no endereço: Vascan (btempurl.com)
