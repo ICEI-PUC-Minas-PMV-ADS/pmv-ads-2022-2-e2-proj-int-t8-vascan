@@ -1,0 +1,511 @@
+/*As cores estão no arquivo "root.css", você adicionar as cores como eu fiz (através do "var()") ou pode só consultar as cores*/
+
+/*Pro código ficar mais organizado e padronizado, eu deixei comentado o lugar onde seria recomendado você começar o seu código*/
+
+/*Qualquer duvida pode me chamar viu?*/
+
+
+
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--background-pag);
+}
+
+
+/*Menu*/
+.menu{
+    width: 16vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-principal-prof);
+    transition: width 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+
+/*Cabeçalho do menu*/
+.menu-cabecalho{
+    margin: 6vh 0 8vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    margin-bottom: 1.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoProvisoria{
+    width: 2.2vw;
+    height: 2vh;
+    margin-right: 1vw;
+    border-radius: 100%;
+    background-color: var(--icones-menu-prof);
+}
+.logo > h2{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: var(--texto-menu);
+}
+
+.menu-cabecalho span{
+    font-size: 0.85vw;
+    font-weight: 400;
+    color: var(--texto-menu);
+}
+
+
+/*Área de links do menu*/
+.menu-links{ margin-bottom: 8vh; }
+
+.link{
+    margin-bottom: 2vh;
+    display: flex;
+}
+.link a{
+    width: 10vw;
+    padding: 2.5vh 1vw;
+    box-sizing: content-box;
+}
+.link i, .btn-ocultar i{
+    font-size: 1.4vw;
+    color: var(--icones-menu-prof);
+}
+.link span{
+    margin-left: 1vw;
+    font-size: 1.07vw;
+    font-weight: 300;
+}
+.link span, .btn-ocultar span{
+    font-weight: 400;
+    color: var(--texto-menu);
+}
+
+.btn-modoUsar{ margin-bottom: 8vh; }
+.btn-modoUsar span, .btn-modoUsar i{ 
+    color: var(--texto-pag); 
+    font-weight: 500;
+}
+.btn-modoUsar a{
+    padding: 2vh 1.5vw;
+    border-radius: 5px;
+    background-color: var(--background-btnMenu-prof);
+}
+.btn-modoUsar span, .btn-ocultar span{
+    margin-left: 0.7vw;
+    font-size: 1vw;
+}
+
+.btn-ocultar{
+    padding: 2vh 3vw;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+
+
+/*Efeitos Hover*/
+.link:hover, .link a:focus, .btn-modoUsar a:hover, .btn-ocultar:hover{
+    border-radius: 5px;
+    background-color: var(--cor-destaques-prof)
+}
+
+
+
+/*Configurações do modo "menu fechado"*/
+body.fechar .menu{
+    width: 8vw;
+}
+
+body.fechar .ocultar{
+    display: none;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+body.fechar .logoProvisoria{
+    margin: 0;
+}
+
+body.fechar .link a{
+    width: 5vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body.fechar .btn-ocultar{
+    padding: 1.5vh 1.5vw;
+}
+body.fechar .btn-ocultar i {
+    font-size: 1.4vw;
+    transform: rotate(-180deg);
+}
+
+body.fechar .btn-modoUsar{
+    margin-bottom: 10vh;
+}
+body.fechar .btn-modoUsar span{
+    display: none;
+}
+
+
+
+/*Aqui começa a configuração da página em si*/
+
+/*Cabeçalho*/
+.body-cabecalho{
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: #fff;
+}
+.title{
+    margin-left: 14vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.sair{
+    margin-right: 9vw;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #000;
+}
+.sair:hover{   /*Firular mais o hover*/
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+
+/*Configuração do corpo da página*/
+.body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+    grid-gap: 27vw;
+    margin: 6vh 10vw 6vh 12vw;
+}
+.container-principal{
+    width: 45vw;
+}
+.container-aside{
+    width: 28vw;
+}
+
+
+
+/*Comece a codar a partir daqui por favor*/
+
+.body {
+    max-width: 1500px;
+}
+
+/* Barra de pesquisa */
+
+.box-search button {
+    padding: 5px;
+    color: white;
+    background-color: #034240;
+    border: 1px solid #034240;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -35px;
+    left: 310px;
+}
+
+button {
+    cursor: pointer;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.input-search {
+    border: 1px solid #7E7E7E;
+    outline: none;
+    border-radius: 8px;
+    display: flexbox;
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    bottom: -35px;
+    left: 30px;
+}
+
+.label-search {
+    color: #7E7E7E;
+}
+
+/* Abas da Tabela */
+.nav_tabs {
+    margin: 100px auto;
+    position: relative;
+    width: 1200px;
+    bottom: 20px;
+    right: 85px;
+}
+
+.nav_tabs ul{
+    list-style: none;
+    text-align: center;
+    width: 700px;
+}
+
+.nav_tabs ul li{
+    text-align: center;
+    float: left;
+    position: relative;
+    padding: 0px 30px;
+}
+.nav_tabs label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    bottom: 56px;
+    font-size: 25px;
+}
+
+.rd_tabs {
+    display: none;
+}
+
+#box-label {
+    height: 2px;
+    bottom: 65px;
+    display: block;
+    background: none repeatscroll 0 0 transparent;
+    position: relative;
+}
+
+.rd_tabs:checked ~ #box-label {
+    content: "";
+    transition: 0.4s ease 0s, left 0.4s ease 0s;
+    height: 2px;
+    display: block;
+    background-color: #034240;
+}
+
+.rd_tabs:checked ~ #content1 {
+    display: block;
+}
+
+.rd_tabs:checked ~ #content2 {
+    position: absolute;
+    left: -105px;
+    display: block;
+}
+
+.rd_tabs:checked ~ #content3 {
+    position: absolute;
+    display: block;
+    left: -239px;
+}
+
+.rd_tabs:checked ~ #content4 {
+    position: absolute;
+    display: block;
+    left: -373px;
+}
+
+/* Tabelas */
+
+.content {
+    border: 1px solid;
+    position: absolute;
+    left: 29px;
+    top: 75px;
+    display: none;
+    height: 600px;
+    width: 1400px;
+}
+
+.tabela-principal {
+    width: 100%;
+    background-color: #ACC6C4;
+    
+}
+
+
+
+
+
+
+
+/*Responsividade*//*Responsividade meio meia boca (por enquanto)*/
+@media(max-width: 425px){
+
+    /*Menu*/
+    body.fechar .menu { width: 17vw; }
+    .menu{ width: 40vw; }
+
+    /*Cabeçalho do menu*/
+    .menu-cabecalho{ margin: 5vh 0; }
+    .logoProvisoria{
+        width: 8.2vw;
+        height: 4vh;
+        margin-right: 2vw;
+    }
+    .logo > h2{ font-size: 3vw; }
+
+
+    /*Área de links do menu*/
+    .menu-links{ margin-bottom: 6vh; }
+
+    .link{
+        margin-bottom: 2.5vh;
+        align-items: center;
+    }
+    .link a{
+        width: 23vw;
+        padding: 2.5vh 6vw;
+    }
+    .link i, .btn-modoUsar i, .btn-ocultar i{ font-size: 3.8vw; }
+    .link span{
+        margin-left: 2vw;
+        font-size: 3vw;
+    }
+
+    .btn-modoUsar{ margin-bottom: 9vh; }
+    .btn-modoUsar a{ padding: 2.5vh 6vw; }
+    .btn-modoUsar span, .btn-ocultar span{
+        margin-left: 2vw;
+        font-size: 2.5vw;
+    }
+
+
+    /*Configurações do modo "menu fechado"*/
+    body.fechar .menu{ width: 20vw; }
+
+    body.fechar .link a, body.fechar .btn-ocultar{ width: 17vw }
+
+    body.fechar .btn-ocultar{ padding: 2.5vh 6vw; }
+    body.fechar .btn-ocultar i { font-size: 4vw; }
+
+
+
+    /*Cabeçalho*/
+    .title{
+        margin-left: 28vw;
+        font-size: 3vw;
+    }
+    .sair{
+        margin-right: 14vw;
+        font-size: 2.5vw;
+    }
+
+    /*Configuração do corpo da página*/
+    .body{ 
+        margin: 4vh 10vw 6vh 28vw; 
+        grid-gap: 10vw;
+    }
+    .container-principal, .container-aside{ width: 62vw; }
+
+
+    /*Container de Boas-Vindas*/
+    .boasvindas{
+        width: 100%;
+        height: 22vh;
+        margin-top: 0;
+        margin-bottom: 6vh;
+        padding: 4vw;
+    }
+
+    .texto-boasvindas{
+        width: 100%;
+        margin-right: 0;
+    }
+    .texto-boasvindas h2{ font-size: 2.8vw; }
+
+    .ilustracao-boasvindas{ display: none; }
+
+
+    /*Atalhos*/
+    .atalhos{ margin-bottom: 6vh; }
+
+    .atalho-titulo, .horario-titulo, .agenda-titulo, .tarefas-titulo{
+        margin-bottom: 3vh;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .linkatalho{
+        width: 19vw;
+        margin-left: 2vw;
+    }
+
+
+    /*Horário de aula*/
+    .quadro-de-horarios{
+        width: 100%;
+        height: 50vh;
+        display: grid;
+
+    }
+
+
+
+    /*Agenda*/
+    .agenda{
+        width: 100%;
+        height: 38vh;
+        padding: 3vh 7vw;
+        margin-bottom: 6vh;
+    }
+
+    .tarefas{ width: 100%; }
+    .data{ padding-right: 4vw; }
+    .data-tarefa{
+        margin-bottom: 0vh;
+        font-size: 14px;
+    }
+    .texto-tarefa{
+        padding-left: 4vw;
+        font-size: 11px;
+    }
+
+    .agenda a{ margin-top: 4vh; }
+
+
+    /*Tarefas Diárias*/
+    .tarefasdiarias{
+        width: 100%;
+        height: 64vh;
+        padding: 3vh 4vw;
+    }
+}
+@media(max-width: 1540px) {
+    .body {
+        width: 1200px;
+    }
+    .nav_tabs {
+        margin-left: 15px;
+    }
+    .content {
+        width: 1220px;
+        height: 390px;
+        margin-bottom: 0;
+    }
+
+}

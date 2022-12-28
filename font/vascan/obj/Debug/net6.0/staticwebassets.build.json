@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kJdA8O2MC5f/50Y+bpd1+EHInqYwgSWdToXbFf7TYAw=",
+  "Hash": "PQ1W6/SFBiXgOgJcbFy//OnwmJ51eT8o9I0Vi3zib+k=",
   "Source": "vascan",
   "BasePath": "_content/vascan",
   "Mode": "Default",
@@ -170,6 +170,23 @@
       "OriginalItemSpec": "wwwroot\\css\\professorTurmas.css"
     },
     {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\css\\p-turmas.css",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "css/p-turmas.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\p-turmas.css"
+    },
+    {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\css\\responsividade.css",
       "SourceId": "vascan",
       "SourceType": "Discovered",
@@ -289,12 +306,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\delete.svg",
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\delete.ico",
       "SourceId": "vascan",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
       "BasePath": "_content/vascan",
-      "RelativePath": "img/delete.svg",
+      "RelativePath": "img/delete.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,15 +320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\delete.svg"
+      "OriginalItemSpec": "wwwroot\\img\\delete.ico"
     },
     {
-      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\edit.svg",
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\edit.ico",
       "SourceId": "vascan",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
       "BasePath": "_content/vascan",
-      "RelativePath": "img/edit.svg",
+      "RelativePath": "img/edit.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,7 +337,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\edit.svg"
+      "OriginalItemSpec": "wwwroot\\img\\edit.ico"
     },
     {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\imgAula.jpg",
@@ -355,6 +372,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\imgCinza.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\Logo_Vascan (2).ico",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "img/Logo_Vascan (2).ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logo_Vascan (2).ico"
+    },
+    {
+      "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\img\\Logo_Vascan.ico",
+      "SourceId": "vascan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\",
+      "BasePath": "_content/vascan",
+      "RelativePath": "img/Logo_Vascan.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logo_Vascan.ico"
     },
     {
       "Identity": "C:\\Users\\ertal\\OneDrive\\Área de Trabalho\\C# VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\wwwroot\\js\\calen.js",

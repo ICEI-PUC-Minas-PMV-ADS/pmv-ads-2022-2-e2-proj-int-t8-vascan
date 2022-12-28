@@ -1,0 +1,613 @@
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    background-color: #F4F4F4!important;
+}
+
+
+/*Menu Fechado*/
+.menu-principal{
+    width: 8vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-principal-sec);
+    transition: width 0.5s ease-in-out;
+    z-index: 1000;
+}
+.ocultar{
+    display: none;
+}
+
+/*Cabeçalho do menu*/
+.menu-cabecalho{
+    margin: 6vh 0 8vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    margin-bottom: 1.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoProvisoria{
+    width: 2.2vw;
+    height: 2vh;
+    margin: 0;
+    border-radius: 100%;
+    background-color: var(--icones-menu-sec);
+}
+.logo > h2{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: var(--texto-menu);
+}
+
+.menu-cabecalho span{
+    font-size: 0.85vw;
+    font-weight: 400;
+    color: var(--texto-menu);
+}
+
+
+/*Área de links do menu*/
+.menu-links{ 
+    padding: 0;
+    margin-bottom: 6vh; 
+}
+
+.link{
+    margin-bottom: 2vh;
+    display: flex;
+}
+.link a{
+    width: 5vw;
+    padding: 2.5vh 1vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+.link i, .btn-ocultar i{
+    font-size: 1.4vw;
+    color: var(--icones-menu-sec);
+}
+.link span{
+    font-size: 1.07vw;
+    font-weight: 300;
+}
+.link span, .btn-ocultar span{
+    font-weight: 400;
+    color: var(--texto-menu);
+}
+/*novo*/
+.pg_ativa{ 
+    background-color: var(--cor-destaques-sec); 
+    border-radius: 5px;
+}
+
+.btn-modoUsar{ margin-bottom: 8vh; }
+.btn-modoUsar span, .btn-modoUsar i{ 
+    color: var(--texto-pag); 
+    font-weight: 500;
+}
+.btn-modoUsar a{
+    padding: 2vh 1.5vw;
+    border-radius: 5px;
+    background-color: var(--background-btnMenu-sec);
+    text-decoration: none;
+}
+.btn-modoUsar span, .btn-ocultar span{
+    margin-left: 0.7vw;
+    font-size: 1vw;
+}
+
+.btn-ocultar{
+    padding: 2vh 3vw;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+
+/*Efeitos Hover*/
+.link:hover, .link a:focus, .btn-modoUsar a:hover, .btn-ocultar:hover{
+    border-radius: 5px;
+    background-color: var(--cor-destaques-sec);
+}
+/*novo*/
+.btn-modoUsar:hover i, .btn-modoUsar:hover span{ color: var(--icones-menu-sec); }
+
+
+
+/*Menu Aberto*/
+body.fechar .menu-principal{
+    width:16vw;
+}
+
+body.fechar .ocultar{
+    display: block;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+body.fechar .menu-cabecalho{
+    margin-bottom: 4vw;
+}
+body.fechar .logoProvisoria{
+    margin-right: 1vw;
+}
+
+body.fechar .menu-links{
+    margin-bottom: 5vh;
+}
+body.fechar .menu-links li{
+    margin-bottom: 1.5vh;
+}
+body.fechar .link a{
+    display: flex;
+    align-items: baseline;
+    width: 10vw;
+    box-sizing: content-box; 
+    text-align: left;
+    text-decoration: none;
+}
+
+body.fechar .link span{
+    width: 6vw;
+    margin-left: 1.3vw;
+}
+
+body.fechar .btn-ocultar{
+    padding: 1.5vh 1.5vw;
+}
+body.fechar .btn-ocultar i {
+    font-size: 1.4vw;
+    transform: rotate(180deg);
+}
+body.fechar .btn-modoUsar{
+    margin-bottom: 4vh;
+}
+body.fechar .btn-modoUsar a, body.fechar .btn-ocultar{
+    display: flex;
+    align-items: center;
+}
+body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
+    display: block;
+    margin-left: 1vw;
+}
+
+
+
+/*Aqui começa a configuração da página em si*/
+
+/*Cabeçalho*/
+.body-cabecalho{
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: #fff;
+}
+.title{
+    margin-left: 14vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.sair{
+    margin-right: 9vw;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #000;
+}
+.sair:hover{   /*Firular mais o hover*/
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+
+/*Configuração do corpo da página*/
+.body{
+    margin: 6vh 10vw 6vh 12vw;
+    background-color: #F4F4F4;
+}
+.container-principal{
+    width: 45vw;
+}
+.container-aside{
+    width: 28vw;
+}
+
+/*Cabeçalho*/
+.body-cabecalho{
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: #ffffff;
+}
+.title{
+    margin-left: 14vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.sair{
+    margin-right: 9vw;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #000;
+    text-decoration: none;
+}
+.sair:hover{   /*Firular mais o hover*/
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+
+
+
+/*Comece a codar a partir daqui por favor*/
+
+/*Menu da página*/
+.menu-pagina .nav{ margin-bottom: 12vh;}
+.menu-pagina .nav-tabs .nav-item{ margin-right: 3vw;}
+
+/*Tirando estilo padrão do bootstrap*/
+.menu-pagina .nav-tabs .nav-item.show .nav-link, .menu-pagina .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 2px solid var(--background-atalhos-sec);
+    font-weight: 500;
+    color: var(--texto-pag);
+    background: none;
+}
+.menu-pagina .nav-tabs .nav-link{
+    color: var(--texto-pag);
+    border: none;
+}
+
+
+/*Campo de pesquisa de Professor*/
+.campo-pesquisa{ margin-bottom: 8vh; }
+#pesquisaProfessor{
+    width: 20vw;
+    padding: 0.3vh 0.8vw;
+    margin-right: 1.5vw;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #afafaf;
+    font-size: 1vw;
+}
+#pesquisaProfessor::placeholder{color: #afafaf;}
+.campo-pesquisa button{
+    padding: 0.5vh 0.8vw;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--cor-principal-sec);
+    font-weight: 400;
+    font-size: 0.9vw;
+    color: var(--icones-menu-sec);
+}
+.campo-pesquisa button:active{ background-color: var(--cor-destaques-sec); }
+
+
+
+/*Tabela de Professor Matriculados*/
+.tabela-Professor{
+    width: 77.07vw;
+    max-width: 77.5vw;
+    max-height: 89vh;
+    text-align: left;
+}
+.corpo-tabela-Professor{
+    width: 78vw;
+    height: 90vh;
+    border: 1px solid #dadada;
+    border-top: none;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+.corpo-tabela-Professor::-webkit-scrollbar{ 
+    width: 0.8vw;
+    background-color: var(--cor-secundaria-sec);
+}
+.corpo-tabela-Professor::-webkit-scrollbar-button{
+    height: 0;
+}
+.corpo-tabela-Professor::-webkit-scrollbar-thumb{ 
+    background-color: var(--texto-links-sec);
+    border-radius: 3px; 
+}
+
+.cabecalho-tabela-Professor{
+    height: 7.5vh;
+    background-color: var(--cor-secundaria-sec);
+    font-size: 1vw;
+}
+.cabecalho-tabela-Professor th{ padding-left: 1.5vw;}
+.cabecalho-tabela-Professor th, .corpo-tabela-Professor td{ margin-right: 5vw; }
+
+
+.corpo-tabela-Professor td{ 
+    padding: 2vh 0.2vw 2vh 1.5vw; 
+    height: 5vw;
+}
+
+
+.cabecalho-tabela-Professor .id-Professor, .corpo-tabela-Professor .id-Professor{ 
+    width: 5vw; 
+    text-align: center; 
+}
+
+.cabecalho-tabela-Professor .nome-Professor, .corpo-tabela-Professor .nome-Professor{ width: 20vw; }
+
+.cabecalho-tabela-Professor .ano-Professor, .corpo-tabela-Professor .ano-Professor, .cabecalho-tabela-Professor .editar-Professor, .corpo-tabela-Professor .editar-Professor{
+    width: 8vw;
+    text-align: center;
+}
+.cabecalho-tabela-Professor .disciplina-Professor, .corpo-tabela-Professor .disciplina-Professor{width: 5vw;}
+.cabecalho-tabela-Professor .turma-Professor, .corpo-tabela-Professor .turma-Professor{width: 12vw;}
+
+.corpo-tabela-Professor .editar-Professor button{
+    border: none;
+    outline: none;
+    font-size: 1.3vw;
+    color: var(--cor-destaques-sec);
+    background-color: #fff;
+}
+
+.cabecalho-tabela-Professor .info-Professor, .corpo-tabela-Professor .info-Professor{ 
+    width: 6vw; 
+    text-align: center;
+}
+.cabecalho-tabela-Professor .info-Professor, .corpo-tabela-Professor .info-Professor{ 
+    padding-right: 2vw;
+}
+
+
+
+.btn-info-Professor{
+    padding: 0.5vh 1.2vw;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--cor-destaques-sec);
+    font-size: 0.9vw;
+    font-weight: 300;
+    color: var(--icones-menu-sec);
+}
+.btn-info-Professor:active{ background-color: var(--cor-principal-sec); }
+
+
+
+/*Matricular Professor*/
+.area-matricula{ padding: 0 5vw; }
+.area-matricula h2{
+    font-size: 1.8vw;
+    text-align: center;
+    margin-bottom: 6vh;
+}
+.formulario-matricula{
+    display: flex;
+    flex-direction: column;
+}
+.formulario-matricula fieldset{ margin-bottom: 5vh; }
+.formulario-matricula h3{
+    margin-bottom: 3vh;
+    padding-bottom: 1.4vh;
+    border-bottom: 2px solid var(--cor-destaques-sec);
+    font-size: 1.5vw;
+}
+.formulario-matricula .inputs { 
+    padding: 1vh 0; 
+    margin-right: 3vw;
+}
+.formulario-matricula input, select{
+    padding: 0.2vh 0.5vw;
+    border-radius: 5px;
+    border: 1px solid #bebebe;
+    outline: none;
+}
+
+.form-dadosP .inputs label, .form-documentos .inputs label, .form-contatos .inputs label, .form-endereco .inputs label{
+    margin-bottom: 0.5vw;
+    font-size: 1.05vw;
+}
+.form-dadosP h3{ width: 11.5vw;}
+.grupo{
+    display: flex;
+    margin: 2vh 0;
+}
+
+#nomeProfessor, #nomeMae, #nomeResponsavel{
+    width: 30vw;
+}
+.inputs #estrang{ margin-left: 2vw;}
+
+.form-documentos h3{ width: 9vw; }
+
+
+.form-contatos h3, .form-endereco h3{ width: 7vw; }
+.form-contatos h4{ font-size: 1.3vw; }
+
+#rua_av{ width: 25vw;}
+#numero_casa, #complemento_casa{ width: 8vw; }
+#cep{ width: 10vw;}
+
+
+.acesso-Professor h3{ 
+    width: 24vw;
+    margin-top: 5vh;
+}
+.acesso-Professor label{ margin-right: 0.2vw;}
+.acesso-Professor .btn_gerarSenha{
+    border: none;
+    outline: none;
+    background-color: var(--cor-destaques-sec);
+    color: #fff;
+    border-radius: 15px;
+    font-size: 0.8vw;
+    padding: 0.7vh 0.5vw;
+    margin-left: 0.5vw;
+}
+.acesso-Professor .btn_gerarSenha:active{
+    background-color: var(--cor-principal-sec);
+}
+.btn_salvarMatricula{
+    align-self: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 0.9vw;
+    padding: 0.7vh 0.7vw;
+    background-color: var(--cor-principal-sec);
+    color: #fff;
+    margin-top: 5vh;
+}
+
+
+/*Configuração de Modal*/
+.modal-container.mostrar{
+    display: flex;
+}
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    background: rgba(0,0,0, 0.5);
+}
+
+.modalCard{
+    width: 70%;
+    min-width: 600px;
+    height: 80%;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--background-sections);
+}
+
+/*Botão de fechar*/
+.modalCard-fechar{
+    padding: 10px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 1000;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(117, 117, 117, 0.25);
+    background-color: var(--cor-destaques-sec);
+    font-size: 12px;
+    color: #fff;
+}
+.modalCard-fechar:hover{
+    background-color: var(--background-atalhos-sec);
+    transition: .1s;
+}
+
+.modalCard-conteudo{
+    padding: 4vh 3vw;
+}
+
+.conteudo-titulo{
+    margin-bottom: 1vh;
+    color: var(--texto-pag);
+}
+.conteudo-subtitulo{
+    margin-bottom: 5vh;
+    font-weight: 400;
+    font-size: 1.1vw;
+    color: #9c9c9c;
+    
+}
+
+.infos-main{
+    padding-bottom: 3vh;
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.infos-main .contato-info{
+    width: 55%;
+    border-right: 1px solid #bebebe;
+}
+.contato-info i{ 
+    margin-right: 1vw;
+    color: var(--texto-links-sec);
+}
+.infos-main .acesso-info{
+    width: 40%;
+    padding-left: 2vw;
+}
+.acesso-info input{
+    margin-bottom: 2vh;
+    padding: 0.5vh 0.5vw;
+    border-radius: 8px;
+    border: 1px solid #afafaf;
+    outline: none;
+    font-size: 0.9vw;
+    color: #636363;
+}
+.acesso-info label{
+    margin: 0 0 0.6vh 0.2vw;
+    font-size: 0.8vw;
+    font-weight: 500;
+    color: var(--texto-links-sec);
+}
+.acesso-info i{
+    padding-top: 1vh;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+
+.infos-detalhes h4{
+    width: 5vw;
+    padding-bottom: 1vh;
+    margin: 5vh 0 3vh 0;
+    border-bottom: 2px solid var(--cor-destaques-sec);
+    font-size: 1.2vw;
+}
+.info-aulas, .info-pessoal div{
+    display: flex;
+    margin-bottom: 2vh;
+}
+.info-aulas p, .info-pessoal p{
+    margin-right: 5vw;
+    font-size: 1vw;
+}
+.info-aulas strong, .info-pessoal strong{
+    margin-right: 0.6vw;
+    font-weight: 600;
+}
+

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ertal77-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ertal\\OneDrive\\Área\ de\ Trabalho\\C\#\ VASCAN\\vascan\\pmv-ads-2022-2-e2-proj-int-t8-vascan\\font\\vascan\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

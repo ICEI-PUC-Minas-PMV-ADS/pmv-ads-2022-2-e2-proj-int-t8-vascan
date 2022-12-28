@@ -1,0 +1,47 @@
+:root{
+    /*Cores em comum*/
+    --background-pag: #F4F4F4;
+    --background-sections: #FFFFFF;
+
+    --texto-pag: #000;
+    --texto-menu: #FFFFFF;
+
+
+    /*Cores da página do Professor*/
+    --cor-principal-prof: #034240;
+    --cor-secundaria-prof: #ACC6C4;
+    --cor-destaques-prof: #196964;
+
+    --background-atalhos-prof: #5B9895;
+    --background-btnMenu-prof: #CBEFED;
+
+    --icones-menu-prof: #F6FFFF;
+
+    --texto-links-prof: #647978;
+
+
+    /*Cores da página do Aluno*/
+    --cor-principal-aluno: #092044;
+    --cor-secundaria-aluno: #BEC9DA;
+    --cor-destaques-aluno: #184588;
+
+    --background-atalhos-aluno: #7B92B5;
+    --background-btnMenu-aluno: #BDCCE5;
+
+    --icones-menu-aluno: #F6FAFF;
+
+    --texto-links-aluno: #6D7888;
+
+
+    /*Cores da página do Secretário*/
+    --cor-principal-sec: #241743;
+    --cor-secundaria-sec: #EAE8FF;
+    --cor-destaques-sec: #493F83;
+
+    --background-atalhos-sec: #8D88BE;
+    --background-btnMenu-sec: #D2CEF3;
+
+    --icones-menu-sec: #F3F2FF;
+
+    --texto-links-sec: #706C98;
+}

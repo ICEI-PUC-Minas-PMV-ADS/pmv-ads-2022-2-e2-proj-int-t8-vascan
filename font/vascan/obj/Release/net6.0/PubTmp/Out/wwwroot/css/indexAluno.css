@@ -1,0 +1,487 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--background-pag);
+}
+
+
+/*Menu Fechado*/
+.menu{
+    width: 8vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-principal-aluno);
+    transition: width 0.5s ease-in-out;
+    z-index: 1000;
+}
+.ocultar{
+    display: none;
+}
+
+/*Cabeçalho do menu*/
+.menu-cabecalho{
+    margin: 6vh 0 8vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    margin-bottom: 1.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoProvisoria{
+    width: 2.2vw;
+    height: 2vh;
+    margin: 0;
+    border-radius: 100%;
+    background-color: var(--icones-menu-aluno);
+}
+.logo > h2{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: var(--texto-menu);
+}
+
+.menu-cabecalho span{
+    font-size: 0.85vw;
+    font-weight: 400;
+    color: var(--texto-menu);
+}
+
+
+/*Área de links do menu*/
+.menu-links{ margin-bottom: 8vh; }
+
+.link{
+    margin-bottom: 2vh;
+    display: flex;
+}
+.link a{
+    width: 5vw;
+    padding: 2.5vh 1vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+.link i, .btn-ocultar i{
+    font-size: 1.4vw;
+    color: var(--icones-menu-aluno);
+}
+.link span{
+    font-size: 1.07vw;
+    font-weight: 300;
+}
+.link span, .btn-ocultar span{
+    font-weight: 400;
+    color: var(--texto-menu);
+}
+.pg_ativa{ 
+    background-color: var(--cor-destaques-aluno); 
+    border-radius: 5px;
+}
+
+.btn-modoUsar{ margin-bottom: 8vh; }
+.btn-modoUsar span, .btn-modoUsar i{ 
+    color: var(--texto-pag); 
+    font-weight: 500;
+}
+.btn-modoUsar a{
+    padding: 2vh 1.5vw;
+    border-radius: 5px;
+    background-color: var(--background-btnMenu-aluno);
+}
+.btn-modoUsar span, .btn-ocultar span{
+    margin-left: 0.7vw;
+    font-size: 1vw;
+}
+
+.btn-ocultar{
+    padding: 2vh 3vw;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+
+/*Efeitos Hover*/
+.link:hover, .link a:focus, .btn-modoUsar a:hover, .btn-ocultar:hover{
+    border-radius: 5px;
+    background-color: var(--cor-destaques-aluno)
+}
+
+
+
+/*Menu Aberto*/
+body.fechar .menu{
+    width:16vw;
+}
+
+body.fechar .ocultar{
+    display: block;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+body.fechar .menu-cabecalho{
+    margin-bottom: 4vw;
+}
+body.fechar .logoProvisoria{
+    margin-right: 1vw;
+}
+
+body.fechar .menu-links{
+    margin-bottom: 5.5vh;
+}
+body.fechar .link a{
+    display: flex;
+    align-items: baseline;
+    width: 10vw;
+    box-sizing: content-box; 
+    text-align: left;
+}
+body.fechar .link span{
+    width: 6vw;
+    margin-left: 1.3vw;
+}
+
+body.fechar .btn-ocultar{
+    padding: 1.5vh 1.5vw;
+}
+body.fechar .btn-ocultar i {
+    font-size: 1.4vw;
+    transform: rotate(180deg);
+}
+body.fechar .btn-modoUsar{
+    margin-bottom: 6vh;
+}
+body.fechar .btn-modoUsar a, body.fechar .btn-ocultar{
+    display: flex;
+    align-items: center;
+}
+body.fechar .btn-modoUsar span, body.fechar .btn-ocultar span{
+    display: block;
+    margin-left: 1vw;
+}
+
+
+/*Aqui começa a configuração da página em si*/
+
+/*Cabeçalho*/
+.body-cabecalho{
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: #fff;
+}
+.title{
+    margin-left: 14vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.sair{
+    margin-right: 9vw;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #000;
+}
+.sair:hover{   /*Firular mais o hover*/
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+
+/*Configuração do corpo da página*/
+.body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+    grid-gap: 27vw;
+    margin: 6vh 10vw 6vh 12vw;
+}
+.container-principal{
+    width: 45vw;
+}
+.container-aside{
+    width: 28vw;
+}
+
+/*Container de Boas-Vindas*/
+.boasvindas{
+    width: 45vw;
+    height: 18vh;
+    margin: 3vh 0 6vh 0;
+    padding: 10vh 3vw;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.texto-boasvindas{
+    width: 27vw;
+    margin-right: 3vw;
+}
+.texto-boasvindas h2{
+    margin-bottom: 2.5vh;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+.texto-boasvindas span{ font-weight: 600; }
+.texto-boasvindas p{
+    font-size: 1vw;
+    margin-bottom: 2.5vh;
+    color: #7C7C7C;
+}
+.texto-boasvindas a{
+    font-size: 1vw;
+    font-weight: 500;
+    color: var(--cor-destaques-aluno);
+}
+.texto-boasvindas a:hover, .agenda a:hover{
+    font-weight: 600;
+    color: var(--texto-links-aluno);
+}
+
+.ilustracao-boasvindas{
+    width: 9vw;
+    height: 19vh;
+    position: relative;
+    bottom: 3vh;
+    border-radius: 10px;
+    background-color: var(--cor-destaques-aluno);
+}
+
+
+/*Atalhos*/
+.atalhos{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+
+.atalho-titulo, .horario-titulo, .agenda-titulo, .tarefas-titulo{
+    margin-bottom: 3vh;
+    font-size: 1.05vw;
+    font-weight: 500;
+}
+
+.atalhos-link{
+    display: flex;
+    align-items: center;
+
+}
+.linkatalho{
+    padding: 4vh 2.5vw;
+    margin-left: 2vw;
+    border-radius: 5px;
+    background-color: var(--background-atalhos-aluno);
+    color: #202020;
+    font-weight: 500;
+}
+.linkatalho:nth-of-type(1){ padding: 5vh 4vw; }
+
+
+/*Horário de aula*/
+.quadro-de-horarios{
+    width: 45vw;
+    height: 49vh;
+    padding: 3vh 1vw;
+    border-radius: 10px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5vw;
+}
+.horario-dia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-dia{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 4vh;
+}
+.aula{
+    padding: 2.4vh 2.1vw;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    width: 8vw;
+    text-align: center;
+}
+.aula p{
+    font-size: 0.9vw;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+.intervalo{
+    height: 2vh;
+}
+
+/*Agenda*/
+.agenda{
+    width: 28vw;
+    height: 40vh;
+    padding: 3vh 2vw;
+    margin-bottom: 6vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #fff;
+    scrollbar-arrow-color: #5B9895;
+}
+.agenda::-webkit-scrollbar{ width: 0.8vw; }
+.agenda::-webkit-scrollbar-button{
+    height: 0;
+}
+.agenda::-webkit-scrollbar-thumb{ 
+    background-color: var(--cor-principal-aluno);
+    border-radius: 10px; 
+}
+
+.agenda-titulo{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.tarefas{
+    width: 22vw;
+    display: flex;
+    margin: 3vh 0 1vh 0;
+}
+.data{
+    padding: 0.3vh 2vw 0.3vh 1vw;
+    border-right: var(--cor-destaques-aluno) 2px solid;
+}
+.data-tarefa{
+    margin-bottom: 0.1vh;
+    font-size: 1vw;
+    font-weight: 600;
+}
+.data-tarefa_dia{
+    font-size: 0.8vw;
+    font-weight: 400;
+    color: #535353;
+}
+.texto-tarefa{
+    padding-left: 2vw;
+    align-self: center;
+    font-size: 1vw;
+}
+
+.agenda a{
+    position:initial;
+    margin-top: 7vh;
+    align-self: center;
+    font-size: 1vw;
+    font-weight: 500;
+    color: var(--cor-destaques-aluno);
+}
+
+
+/*Tarefas Diárias*/
+.tarefasdiarias{
+    width: 28vw;
+    height: 62.5vh;
+    padding: 3vh 2vw;
+    border-radius: 10px;
+    background-color: var(--cor-principal-aluno);
+    overflow: scroll;
+}
+.tarefas-titulo{ 
+    text-align: center;
+    color: #fff;
+}
+.tarefasdiarias::-webkit-scrollbar{ width: 0.8vw;}
+.tarefasdiarias::-webkit-scrollbar-button{ height: 0; }
+.tarefasdiarias::-webkit-scrollbar-corner{}
+.tarefasdiarias::-webkit-scrollbar-thumb{ 
+    background-color: var(--cor-secundaria-aluno);
+    border-radius: 10px; 
+}
+
+.form-tarefas{
+    width: 100%;
+    padding: 1.5vh 1vw 1.5vh 2vw;
+    margin: 3vh 0 5vh 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.form-tarefas input{
+    width: 80%;
+    border: none;
+    outline: none;
+    background-color: #ffffff00;
+    color: var(--texto-links-aluno);
+}
+.form-tarefas button{
+    padding: 0.5vh 0.5vw;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--background-atalhos-aluno);
+    color: #fff;
+    font-weight: 600;
+}
+.form-tarefas button:active{
+    background-color: var(--cor-destaques-aluno);
+}
+
+.divLi{
+    margin-bottom: 3vh;
+    padding: 2vh 0.5vw;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.divLi span{
+    width: 80%;
+    color: #535353;
+}
+.divLi input{
+    width: 10%;
+    outline: none;
+    accent-color: currentcolor;
+}
+.divLi button{
+    cursor: pointer;
+    outline: none;
+    background-color: #ffffff00;
+    border: none;
+}
+.divLi i{
+    font-size: 1.4vw;
+    color: var(--cor-principal-aluno);
+}
+li{ list-style-type: none; }
+.line-through{ text-decoration: line-through; }
+.btn-invisivel{ display: none;}
+
+
+
+
+

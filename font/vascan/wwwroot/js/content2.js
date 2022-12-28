@@ -22,8 +22,6 @@ class Aluno2 {
 
     excluir(id2) {
 
-        if(confirm('Deseja realmente deletar o ID: ' + id2 + '?')){
-
             let tbody = document.getElementById('tbody2')
 
             for(let i = 0; i < this.arrayAlunos.length; i++) {
@@ -32,7 +30,6 @@ class Aluno2 {
                     tbody.deleteRow(i);
                 }
             }
-        }
     }
 
     listaTabela() {
@@ -59,12 +56,12 @@ class Aluno2 {
             td_id.classList.add('center');
 
             let imgEdit = document.createElement('img');
-            imgEdit.src = '/img/edit.svg';
+            imgEdit.src = '../img/edit.ico';
             imgEdit.setAttribute("onclick", 'aluno2.preparaEdicao('+ JSON.stringify(this.arrayAlunos[i]) +')');
 
 
             let imgDelete = document.createElement('img');
-            imgDelete.src = '/img/delete.svg';
+            imgDelete.src = '../img/delete.ico';
             imgDelete.setAttribute("onclick", "aluno2.excluir("+this.arrayAlunos[i].id2+")");
 
             td_acoes.appendChild(imgEdit);

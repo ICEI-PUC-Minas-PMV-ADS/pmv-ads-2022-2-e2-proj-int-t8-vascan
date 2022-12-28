@@ -6,7 +6,7 @@ namespace vascan.Data
 {
     public class Conexao
     {
-        SqlConnection consql = new SqlConnection(@"Data Source=DESKTOP-FT37FDC;Initial Catalog=dbvascan;Integrated Security=True;Pooling=False");
+        SqlConnection consql = new SqlConnection(@"Data Source=SQL8002.site4now.net;Initial Catalog=db_a90900_vascan;User Id=db_a90900_vascan_admin;Password=vascan12345");
 
         public SqlConnection conectarsql()
         {
