@@ -1,0 +1,28 @@
+message: Please cite this software using these metadata.
+title: Vascan - Gestão Escolar
+authors:
+  - family-names: de Assis Oliveira
+    given-names:  Rafael
+  - family-names: Rodrigues Pinto
+    given-names:  Mauricio
+  - family-names: Luis Costa Moreira
+    given-names:  César
+  - family-names: Delareti Simões
+    given-names:  Douglas
+  - family-names: Agnes Massensini Pereira
+    given-names:  Karinne
+  - family-names: Henrique Ertal de Oliveira
+    given-names:  Pedro
+  - family-names: Ellem Teixeira Ildefonso
+    given-names:  Sarah
+  - name-suffix:  Professor
+    affiliation:  PUC Minas
+    family-names: Carvalho
+    given-names:  Daniela
+  keywords:
+  - Escola
+  - Professores
+  - Alunos
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t8-vascan
+version: 1.0.0
+date-released: 2022-12-01
